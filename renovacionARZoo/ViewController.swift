@@ -1,25 +1,28 @@
 //
 //  ViewController.swift
-//  renovacionARZoo
+//  miloginKit
 //
-//  Created by Kike on 8/2/18.
+//  Created by Kike on 6/2/18.
 //  Copyright © 2018 Kike. All rights reserved.
 //
 
 import UIKit
-
+import SkyFloatingLabelTextField
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    lazy var loginCoordinator: MiLoginCoordinator = {
+        return MiLoginCoordinator(rootViewController: self)
+    }()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loginCoordinator.start()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

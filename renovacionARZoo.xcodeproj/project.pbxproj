@@ -12,9 +12,41 @@
 		6FF5DFFF202C9DB70071EDCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5DFFD202C9DB70071EDCC /* Main.storyboard */; };
 		6FF5E001202C9DB70071EDCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E000202C9DB70071EDCC /* Assets.xcassets */; };
 		6FF5E004202C9DB70071EDCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E002202C9DB70071EDCC /* LaunchScreen.storyboard */; };
+		6FF5E02A202C9DFD0071EDCC /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E00C202C9DFD0071EDCC /* Montserrat-Light.otf */; };
+		6FF5E02B202C9DFE0071EDCC /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E00D202C9DFD0071EDCC /* PasswordViewController.xib */; };
+		6FF5E02C202C9DFE0071EDCC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E00E202C9DFD0071EDCC /* LoginViewController.xib */; };
+		6FF5E02D202C9DFE0071EDCC /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E00F202C9DFD0071EDCC /* InitialViewController.xib */; };
+		6FF5E02E202C9DFE0071EDCC /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E010202C9DFD0071EDCC /* Montserrat-Regular.ttf */; };
+		6FF5E02F202C9DFE0071EDCC /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E011202C9DFD0071EDCC /* SignupViewController.xib */; };
+		6FF5E030202C9DFE0071EDCC /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E012202C9DFD0071EDCC /* ChangePasswordViewController.xib */; };
+		6FF5E031202C9DFE0071EDCC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E014202C9DFD0071EDCC /* User.swift */; };
+		6FF5E032202C9DFE0071EDCC /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E016202C9DFD0071EDCC /* Requests.swift */; };
+		6FF5E033202C9DFE0071EDCC /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E017202C9DFD0071EDCC /* Responses.swift */; };
+		6FF5E034202C9DFE0071EDCC /* GradientImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E019202C9DFD0071EDCC /* GradientImageView.swift */; };
+		6FF5E035202C9DFE0071EDCC /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E01A202C9DFD0071EDCC /* SkyFloatingLabelTextField.swift */; };
+		6FF5E036202C9DFE0071EDCC /* KeyboardMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E01B202C9DFD0071EDCC /* KeyboardMover.swift */; };
+		6FF5E037202C9DFE0071EDCC /* BackgroundMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E01C202C9DFD0071EDCC /* BackgroundMover.swift */; };
+		6FF5E038202C9DFE0071EDCC /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E01D202C9DFD0071EDCC /* LoginCoordinator.swift */; };
+		6FF5E039202C9DFE0071EDCC /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E01E202C9DFD0071EDCC /* ChangePasswordViewController.swift */; };
+		6FF5E03A202C9DFE0071EDCC /* Buttn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E01F202C9DFD0071EDCC /* Buttn.swift */; };
+		6FF5E03B202C9DFE0071EDCC /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E020202C9DFD0071EDCC /* PasswordViewController.swift */; };
+		6FF5E03C202C9DFE0071EDCC /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E021202C9DFD0071EDCC /* InitialViewController.swift */; };
+		6FF5E03D202C9DFE0071EDCC /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E022202C9DFD0071EDCC /* UITextField+fixCaretPosition.swift */; };
+		6FF5E03E202C9DFE0071EDCC /* ValidatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E023202C9DFD0071EDCC /* ValidatorService.swift */; };
+		6FF5E03F202C9DFE0071EDCC /* SingupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E024202C9DFD0071EDCC /* SingupViewController.swift */; };
+		6FF5E040202C9DFE0071EDCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E025202C9DFD0071EDCC /* LoginViewController.swift */; };
+		6FF5E041202C9DFE0071EDCC /* CrossDissolveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E026202C9DFD0071EDCC /* CrossDissolveAnimation.swift */; };
+		6FF5E042202C9DFE0071EDCC /* UIViewController+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E027202C9DFD0071EDCC /* UIViewController+Nib.swift */; };
+		6FF5E043202C9DFE0071EDCC /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E028202C9DFD0071EDCC /* FacebookService.swift */; };
+		6FF5E044202C9DFE0071EDCC /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E029202C9DFD0071EDCC /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		6FF5E04B202C9EA70071EDCC /* appTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E049202C9EA60071EDCC /* appTools.swift */; };
+		6FF5E04C202C9EA70071EDCC /* MiLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5E04A202C9EA70071EDCC /* MiLoginCoordinator.swift */; };
+		7403B66D3FB27543B7B06D5A /* Pods_renovacionARZoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A8C11827EB7A39D2D6C787 /* Pods_renovacionARZoo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30A8C11827EB7A39D2D6C787 /* Pods_renovacionARZoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_renovacionARZoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64BBC777931664F71D4F4B6D /* Pods-renovacionARZoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-renovacionARZoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-renovacionARZoo/Pods-renovacionARZoo.release.xcconfig"; sourceTree = "<group>"; };
 		6FF5DFF6202C9DB70071EDCC /* renovacionARZoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = renovacionARZoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF5DFF9202C9DB70071EDCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FF5DFFB202C9DB70071EDCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +54,40 @@
 		6FF5E000202C9DB70071EDCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FF5E003202C9DB70071EDCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FF5E005202C9DB70071EDCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FF5E00C202C9DFD0071EDCC /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		6FF5E00D202C9DFD0071EDCC /* PasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordViewController.xib; sourceTree = "<group>"; };
+		6FF5E00E202C9DFD0071EDCC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		6FF5E00F202C9DFD0071EDCC /* InitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
+		6FF5E010202C9DFD0071EDCC /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		6FF5E011202C9DFD0071EDCC /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		6FF5E012202C9DFD0071EDCC /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		6FF5E014202C9DFD0071EDCC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6FF5E016202C9DFD0071EDCC /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		6FF5E017202C9DFD0071EDCC /* Responses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		6FF5E019202C9DFD0071EDCC /* GradientImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientImageView.swift; sourceTree = "<group>"; };
+		6FF5E01A202C9DFD0071EDCC /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		6FF5E01B202C9DFD0071EDCC /* KeyboardMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMover.swift; sourceTree = "<group>"; };
+		6FF5E01C202C9DFD0071EDCC /* BackgroundMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundMover.swift; sourceTree = "<group>"; };
+		6FF5E01D202C9DFD0071EDCC /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		6FF5E01E202C9DFD0071EDCC /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		6FF5E01F202C9DFD0071EDCC /* Buttn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttn.swift; sourceTree = "<group>"; };
+		6FF5E020202C9DFD0071EDCC /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		6FF5E021202C9DFD0071EDCC /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		6FF5E022202C9DFD0071EDCC /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		6FF5E023202C9DFD0071EDCC /* ValidatorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorService.swift; sourceTree = "<group>"; };
+		6FF5E024202C9DFD0071EDCC /* SingupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingupViewController.swift; sourceTree = "<group>"; };
+		6FF5E025202C9DFD0071EDCC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6FF5E026202C9DFD0071EDCC /* CrossDissolveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossDissolveAnimation.swift; sourceTree = "<group>"; };
+		6FF5E027202C9DFD0071EDCC /* UIViewController+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nib.swift"; sourceTree = "<group>"; };
+		6FF5E028202C9DFD0071EDCC /* FacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookService.swift; sourceTree = "<group>"; };
+		6FF5E029202C9DFD0071EDCC /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		6FF5E049202C9EA60071EDCC /* appTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appTools.swift; sourceTree = "<group>"; };
+		6FF5E04A202C9EA70071EDCC /* MiLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiLoginCoordinator.swift; sourceTree = "<group>"; };
+		6FF5E057202CCBC30071EDCC /* ViewStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStoryViewController.swift; sourceTree = "<group>"; };
+		6FF5E058202CCBC30071EDCC /* CreateStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStoryViewController.swift; sourceTree = "<group>"; };
+		6FF5E059202CCBC30071EDCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6FF5E05A202CCBC30071EDCC /* CellStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStory.swift; sourceTree = "<group>"; };
+		CF5022227C5C36524736B8CF /* Pods-renovacionARZoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-renovacionARZoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-renovacionARZoo/Pods-renovacionARZoo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7403B66D3FB27543B7B06D5A /* Pods_renovacionARZoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +107,8 @@
 			children = (
 				6FF5DFF8202C9DB70071EDCC /* renovacionARZoo */,
 				6FF5DFF7202C9DB70071EDCC /* Products */,
+				7961205302A3BF3022408A0E /* Pods */,
+				8F6408A173A8E7D1A5202AC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +123,13 @@
 		6FF5DFF8202C9DB70071EDCC /* renovacionARZoo */ = {
 			isa = PBXGroup;
 			children = (
+				6FF5E013202C9DFD0071EDCC /* Clases */,
+				6FF5E015202C9DFD0071EDCC /* Requests */,
+				6FF5E00B202C9DFD0071EDCC /* Resources */,
+				6FF5E056202CCBC30071EDCC /* Profile */,
+				6FF5E018202C9DFD0071EDCC /* LOGINKIT */,
+				6FF5E049202C9EA60071EDCC /* appTools.swift */,
+				6FF5E04A202C9EA70071EDCC /* MiLoginCoordinator.swift */,
 				6FF5DFF9202C9DB70071EDCC /* AppDelegate.swift */,
 				6FF5DFFB202C9DB70071EDCC /* ViewController.swift */,
 				6FF5DFFD202C9DB70071EDCC /* Main.storyboard */,
@@ -64,6 +140,93 @@
 			path = renovacionARZoo;
 			sourceTree = "<group>";
 		};
+		6FF5E00B202C9DFD0071EDCC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6FF5E00C202C9DFD0071EDCC /* Montserrat-Light.otf */,
+				6FF5E00D202C9DFD0071EDCC /* PasswordViewController.xib */,
+				6FF5E00E202C9DFD0071EDCC /* LoginViewController.xib */,
+				6FF5E00F202C9DFD0071EDCC /* InitialViewController.xib */,
+				6FF5E010202C9DFD0071EDCC /* Montserrat-Regular.ttf */,
+				6FF5E011202C9DFD0071EDCC /* SignupViewController.xib */,
+				6FF5E012202C9DFD0071EDCC /* ChangePasswordViewController.xib */,
+			);
+			name = Resources;
+			path = ../../miloginKit/miloginKit/Resources;
+			sourceTree = "<group>";
+		};
+		6FF5E013202C9DFD0071EDCC /* Clases */ = {
+			isa = PBXGroup;
+			children = (
+				6FF5E014202C9DFD0071EDCC /* User.swift */,
+			);
+			name = Clases;
+			path = ../../iOs/loginTEST/perfilTESTS/perfilTESTS/Clases;
+			sourceTree = "<group>";
+		};
+		6FF5E015202C9DFD0071EDCC /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				6FF5E016202C9DFD0071EDCC /* Requests.swift */,
+				6FF5E017202C9DFD0071EDCC /* Responses.swift */,
+			);
+			name = Requests;
+			path = ../../iOs/loginTEST/perfilTESTS/perfilTESTS/Requests;
+			sourceTree = "<group>";
+		};
+		6FF5E018202C9DFD0071EDCC /* LOGINKIT */ = {
+			isa = PBXGroup;
+			children = (
+				6FF5E019202C9DFD0071EDCC /* GradientImageView.swift */,
+				6FF5E01A202C9DFD0071EDCC /* SkyFloatingLabelTextField.swift */,
+				6FF5E01F202C9DFD0071EDCC /* Buttn.swift */,
+				6FF5E01B202C9DFD0071EDCC /* KeyboardMover.swift */,
+				6FF5E01C202C9DFD0071EDCC /* BackgroundMover.swift */,
+				6FF5E01D202C9DFD0071EDCC /* LoginCoordinator.swift */,
+				6FF5E021202C9DFD0071EDCC /* InitialViewController.swift */,
+				6FF5E025202C9DFD0071EDCC /* LoginViewController.swift */,
+				6FF5E024202C9DFD0071EDCC /* SingupViewController.swift */,
+				6FF5E020202C9DFD0071EDCC /* PasswordViewController.swift */,
+				6FF5E01E202C9DFD0071EDCC /* ChangePasswordViewController.swift */,
+				6FF5E022202C9DFD0071EDCC /* UITextField+fixCaretPosition.swift */,
+				6FF5E023202C9DFD0071EDCC /* ValidatorService.swift */,
+				6FF5E026202C9DFD0071EDCC /* CrossDissolveAnimation.swift */,
+				6FF5E027202C9DFD0071EDCC /* UIViewController+Nib.swift */,
+				6FF5E028202C9DFD0071EDCC /* FacebookService.swift */,
+				6FF5E029202C9DFD0071EDCC /* SkyFloatingLabelTextFieldWithIcon.swift */,
+			);
+			name = LOGINKIT;
+			path = ../../miloginKit/miloginKit/LOGINKIT;
+			sourceTree = "<group>";
+		};
+		6FF5E056202CCBC30071EDCC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6FF5E057202CCBC30071EDCC /* ViewStoryViewController.swift */,
+				6FF5E058202CCBC30071EDCC /* CreateStoryViewController.swift */,
+				6FF5E059202CCBC30071EDCC /* ProfileViewController.swift */,
+				6FF5E05A202CCBC30071EDCC /* CellStory.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7961205302A3BF3022408A0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF5022227C5C36524736B8CF /* Pods-renovacionARZoo.debug.xcconfig */,
+				64BBC777931664F71D4F4B6D /* Pods-renovacionARZoo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F6408A173A8E7D1A5202AC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30A8C11827EB7A39D2D6C787 /* Pods_renovacionARZoo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FF5E008202C9DB70071EDCC /* Build configuration list for PBXNativeTarget "renovacionARZoo" */;
 			buildPhases = (
+				1405E559A61E408E6710F6FB /* [CP] Check Pods Manifest.lock */,
 				6FF5DFF2202C9DB70071EDCC /* Sources */,
 				6FF5DFF3202C9DB70071EDCC /* Frameworks */,
 				6FF5DFF4202C9DB70071EDCC /* Resources */,
+				8A719F319845E64386585E9E /* [CP] Embed Pods Frameworks */,
+				6F04348C83D3EFB6A31892D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,21 +289,116 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FF5E02E202C9DFE0071EDCC /* Montserrat-Regular.ttf in Resources */,
 				6FF5E004202C9DB70071EDCC /* LaunchScreen.storyboard in Resources */,
+				6FF5E030202C9DFE0071EDCC /* ChangePasswordViewController.xib in Resources */,
 				6FF5E001202C9DB70071EDCC /* Assets.xcassets in Resources */,
+				6FF5E02D202C9DFE0071EDCC /* InitialViewController.xib in Resources */,
+				6FF5E02C202C9DFE0071EDCC /* LoginViewController.xib in Resources */,
 				6FF5DFFF202C9DB70071EDCC /* Main.storyboard in Resources */,
+				6FF5E02F202C9DFE0071EDCC /* SignupViewController.xib in Resources */,
+				6FF5E02A202C9DFD0071EDCC /* Montserrat-Light.otf in Resources */,
+				6FF5E02B202C9DFE0071EDCC /* PasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1405E559A61E408E6710F6FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-renovacionARZoo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F04348C83D3EFB6A31892D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-renovacionARZoo/Pods-renovacionARZoo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A719F319845E64386585E9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-renovacionARZoo/Pods-renovacionARZoo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-renovacionARZoo/Pods-renovacionARZoo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FF5DFF2202C9DB70071EDCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FF5E040202C9DFE0071EDCC /* LoginViewController.swift in Sources */,
+				6FF5E03D202C9DFE0071EDCC /* UITextField+fixCaretPosition.swift in Sources */,
+				6FF5E039202C9DFE0071EDCC /* ChangePasswordViewController.swift in Sources */,
+				6FF5E03C202C9DFE0071EDCC /* InitialViewController.swift in Sources */,
+				6FF5E041202C9DFE0071EDCC /* CrossDissolveAnimation.swift in Sources */,
+				6FF5E036202C9DFE0071EDCC /* KeyboardMover.swift in Sources */,
+				6FF5E033202C9DFE0071EDCC /* Responses.swift in Sources */,
+				6FF5E038202C9DFE0071EDCC /* LoginCoordinator.swift in Sources */,
+				6FF5E04B202C9EA70071EDCC /* appTools.swift in Sources */,
+				6FF5E037202C9DFE0071EDCC /* BackgroundMover.swift in Sources */,
 				6FF5DFFC202C9DB70071EDCC /* ViewController.swift in Sources */,
+				6FF5E03E202C9DFE0071EDCC /* ValidatorService.swift in Sources */,
+				6FF5E04C202C9EA70071EDCC /* MiLoginCoordinator.swift in Sources */,
+				6FF5E03B202C9DFE0071EDCC /* PasswordViewController.swift in Sources */,
+				6FF5E034202C9DFE0071EDCC /* GradientImageView.swift in Sources */,
+				6FF5E044202C9DFE0071EDCC /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				6FF5E03F202C9DFE0071EDCC /* SingupViewController.swift in Sources */,
+				6FF5E042202C9DFE0071EDCC /* UIViewController+Nib.swift in Sources */,
+				6FF5E03A202C9DFE0071EDCC /* Buttn.swift in Sources */,
+				6FF5E043202C9DFE0071EDCC /* FacebookService.swift in Sources */,
+				6FF5E032202C9DFE0071EDCC /* Requests.swift in Sources */,
 				6FF5DFFA202C9DB70071EDCC /* AppDelegate.swift in Sources */,
+				6FF5E035202C9DFE0071EDCC /* SkyFloatingLabelTextField.swift in Sources */,
+				6FF5E031202C9DFE0071EDCC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +533,7 @@
 		};
 		6FF5E009202C9DB70071EDCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5022227C5C36524736B8CF /* Pods-renovacionARZoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +549,7 @@
 		};
 		6FF5E00A202C9DB70071EDCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BBC777931664F71D4F4B6D /* Pods-renovacionARZoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
