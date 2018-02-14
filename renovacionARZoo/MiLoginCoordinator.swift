@@ -19,13 +19,13 @@ class MiLoginCoordinator: LoginCoordinator {
     // Customize LoginKit. All properties have defaults, only set the ones you want.
     func configureAppearance() {
         // Customize the look with background & logo images
-        backgroundImage = #imageLiteral(resourceName: "Fondo")
+        backgroundImage = #imageLiteral(resourceName: "fondozoo mas claro")
         // mainLogoImage =
         // secondaryLogoImage =
         // Change colors
        
 
-        tintColor = UIColor(red: 117/255.0, green: 217/255.0, blue: 180/255.0, alpha: 0.5)
+        tintColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 0.5)
         //tintColor = UIColor(red: 136/255.0, green: 64/255.0, blue: 140/255.0, alpha: 0.5)
         errorTintColor = UIColor(red: 242/255.0, green: 137/255.0, blue: 111/255.0, alpha: 1)
         

@@ -6,6 +6,7 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - Device (3.0.3)
   - FBSDKCoreKit (4.30.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.30.0):
@@ -16,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - Device (~> 3.0.3)
   - FBSDKLoginKit
   - SkyFloatingLabelTextField (~> 3.0)
   - Toaster
@@ -24,12 +26,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Device: 9a5264ee4e0f392e7153d2c46b10c8df46b7aad2
   FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
   FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
   Validator: 7d9828daffabc757604603052e407f208fa9b6d5
 
-PODFILE CHECKSUM: ea5887662f6198aa5c74063cebf63db511578471
+PODFILE CHECKSUM: 1ecf1565b18bf33bcf4dbd31f51c0460a4339005
 
 COCOAPODS: 1.4.0

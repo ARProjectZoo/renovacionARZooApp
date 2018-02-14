@@ -13,4 +13,5 @@ target 'renovacionARZoo' do
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'Alamofire', '~> 4.5'
   pod 'Toaster'
+  pod "Device", '~> 3.0.3'
 end
