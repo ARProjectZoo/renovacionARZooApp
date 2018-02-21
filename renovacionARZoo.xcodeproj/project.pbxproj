@@ -57,6 +57,10 @@
 		6F52050D203490E700167CEA /* StoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F52050C203490E700167CEA /* StoryCollectionViewController.swift */; };
 		6F5205102034912400167CEA /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F52050F2034912400167CEA /* StoryCollectionViewCell.swift */; };
 		6F520512203495BA00167CEA /* StoryCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F520511203495BA00167CEA /* StoryCreateViewController.swift */; };
+		6FE2CB8F203CAE2F00437100 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB8E203CAE2F00437100 /* InformationViewController.swift */; };
+		6FE2CB93203CAE4C00437100 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB91203CAE4C00437100 /* VideoCell.swift */; };
+		6FE2CB94203CAE4C00437100 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB92203CAE4C00437100 /* CategoryRow.swift */; };
+		6FE2CB96203D875D00437100 /* AnimalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB95203D875D00437100 /* AnimalListViewController.swift */; };
 		6FF5DFFA202C9DB70071EDCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5DFF9202C9DB70071EDCC /* AppDelegate.swift */; };
 		6FF5DFFC202C9DB70071EDCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5DFFB202C9DB70071EDCC /* ViewController.swift */; };
 		6FF5DFFF202C9DB70071EDCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5DFFD202C9DB70071EDCC /* Main.storyboard */; };
@@ -147,6 +151,10 @@
 		6F52050C203490E700167CEA /* StoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewController.swift; sourceTree = "<group>"; };
 		6F52050F2034912400167CEA /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6F520511203495BA00167CEA /* StoryCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCreateViewController.swift; sourceTree = "<group>"; };
+		6FE2CB8E203CAE2F00437100 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		6FE2CB91203CAE4C00437100 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		6FE2CB92203CAE4C00437100 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		6FE2CB95203D875D00437100 /* AnimalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListViewController.swift; sourceTree = "<group>"; };
 		6FF5DFF6202C9DB70071EDCC /* renovacionARZoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = renovacionARZoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF5DFF9202C9DB70071EDCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FF5DFFB202C9DB70071EDCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +287,17 @@
 			path = StoryCollection;
 			sourceTree = "<group>";
 		};
+		6FE2CB90203CAE3700437100 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				6FE2CB8E203CAE2F00437100 /* InformationViewController.swift */,
+				6FE2CB92203CAE4C00437100 /* CategoryRow.swift */,
+				6FE2CB91203CAE4C00437100 /* VideoCell.swift */,
+				6FE2CB95203D875D00437100 /* AnimalListViewController.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
 		6FF5DFED202C9DB70071EDCC = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +319,7 @@
 		6FF5DFF8202C9DB70071EDCC /* renovacionARZoo */ = {
 			isa = PBXGroup;
 			children = (
+				6FE2CB90203CAE3700437100 /* Information */,
 				6F0EAF502031B66100FA1CBB /* FloatingButton */,
 				6FF5E013202C9DFD0071EDCC /* Clases */,
 				6FF5E015202C9DFD0071EDCC /* Requests */,
@@ -565,6 +585,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-renovacionARZoo/Pods-renovacionARZoo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -576,6 +597,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -597,6 +619,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FF5E040202C9DFE0071EDCC /* LoginViewController.swift in Sources */,
+				6FE2CB8F203CAE2F00437100 /* InformationViewController.swift in Sources */,
+				6FE2CB94203CAE4C00437100 /* CategoryRow.swift in Sources */,
 				6F520512203495BA00167CEA /* StoryCreateViewController.swift in Sources */,
 				6F0EAF582031B66100FA1CBB /* OverLayView.swift in Sources */,
 				6FF5E03D202C9DFE0071EDCC /* UITextField+fixCaretPosition.swift in Sources */,
@@ -613,8 +637,10 @@
 				6F0EAF5C2031B66100FA1CBB /* KYButton.swift in Sources */,
 				6FF5DFFC202C9DB70071EDCC /* ViewController.swift in Sources */,
 				6FF5E03E202C9DFE0071EDCC /* ValidatorService.swift in Sources */,
+				6FE2CB96203D875D00437100 /* AnimalListViewController.swift in Sources */,
 				6F0EAF5A2031B66100FA1CBB /* ButtonLayer.swift in Sources */,
 				6F0EAF592031B66100FA1CBB /* KYButtonCells.swift in Sources */,
+				6FE2CB93203CAE4C00437100 /* VideoCell.swift in Sources */,
 				6F0EAF5B2031B66100FA1CBB /* KYButtonDelegate.swift in Sources */,
 				6F0EAF602031B6AE00FA1CBB /* TableViewCell.swift in Sources */,
 				6F0EAF642031E49000FA1CBB /* Stories.swift in Sources */,

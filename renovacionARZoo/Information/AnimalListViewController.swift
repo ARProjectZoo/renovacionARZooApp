@@ -1,14 +1,14 @@
 //
-//  StoryCollectionViewController.swift
+//  AnimalListViewController.swift
 //  renovacionARZoo
 //
-//  Created by Kike on 14/2/18.
+//  Created by Kike on 21/2/18.
 //  Copyright © 2018 Kike. All rights reserved.
 //
 
 import UIKit
 
-class StoryCollectionViewController: UIViewController, UICollectionViewDelegate {
+class AnimalListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

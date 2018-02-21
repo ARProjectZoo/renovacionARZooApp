@@ -7,58 +7,28 @@
 //
 
 import UIKit
-class ProfileTableViewController: UIViewController, KYButtonDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ProfileTableViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var profilePictureIV: UIImageView!
-    @IBOutlet weak var floatingButton: KYButton!
-    @IBOutlet weak var navBarScrollingFollowView: ScrollingFollowView!
-
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var floatingButton: UIButton!
     
-    @IBOutlet weak var navBarTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var navBarTitle: UINavigationItem!
+
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     @IBOutlet weak var tabBarItemProfile: UITabBarItem!
     
     
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var imagePicked : UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
         profilePictureIV.layer.cornerRadius = profilePictureIV.frame.size.width / 2
         profilePictureIV.clipsToBounds = true
-        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "FondoProfile") )
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
-            let navBarHeight: CGFloat = 20
-            let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
-        
-        navBarScrollingFollowView.setup(constraint: navBarTopConstraint, maxFollowPoint: navBarHeight + statusBarHeight, minFollowPoint: 0)
-        navBarScrollingFollowView.setupDelayPoints(pointOfStartingHiding: 100, pointOfStartingShowing: 0)
-        
-        navBarScrollingFollowView.backgroundColor = UIColor.green
-        
-        floatingButton.kyDelegate = self
-        floatingButton.openType = .slideUp
-        floatingButton.plusColor = UIColor.green     //  Change plus color
-        floatingButton.fabTitleColor = UIColor.black    // Change title color
-        floatingButton.add(color: .black, title: "Add", image: #imageLiteral(resourceName: "signo-mas-para-agregar")){(item)
-            in
-            let alert = UIAlertController(title: "Hello", message: "Are you ok?", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
-            
-        }
-        floatingButton.add(color: .black, title: "Delete", image: #imageLiteral(resourceName: "cruz")) { (item) in
-            let alert = UIAlertController(title: "Hello", message: "Are you ok?", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
-        
-        }
-        
+        floatingButton.setImage(#imageLiteral(resourceName: "signo-mas-para-agregar"), for: .normal)
     }
     
     @IBAction func changeProfilePicture(_ sender: Any) {
@@ -123,75 +93,29 @@ class ProfileTableViewController: UIViewController, KYButtonDelegate, UINavigati
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
-
-}
-
-extension ProfileTableViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 150//Choose your custom row height
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayStories.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.row < 1){
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "storyCell") else { fatalError("Empty Cell") }
-            let myCell = cell as! TableViewCell
-            myCell.imageCell.image = arrayStories[0].image
-            myCell.labelCell.text = arrayStories[0].description
-            return myCell
-        }else{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "storyCell") else { fatalError("Empty Cell") }
-            let myCell = cell as! TableViewCell
-            myCell.imageCell.image = arrayStories[1].image
-            myCell.labelCell.text = arrayStories[1].description
-            return myCell
-        }
-        
-        
-    }
-}
-
-extension ProfileTableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-       
-    }
-}
-
-extension ProfileTableViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        navBarScrollingFollowView.didScroll(scrollView)
-        if tableView.contentOffset.y < 100 {
-            navBarScrollingFollowView.show(true) {
-                print("show")
-                self.navBarTitle.title = "Profile"
-                self.tabBarItemProfile.badgeColor = #colorLiteral(red: 0.2196078431, green: 0.5568627451, blue: 0.2352941176, alpha: 1)
-                
-            }
-        } else {
-            navBarScrollingFollowView.hide(true) {
-                print("hide")
-            self.tabBarItemProfile.badgeColor = #colorLiteral(red: 0.2196078431, green: 0.5568627451, blue: 0.2352941176, alpha: 1)
-                self.navBarTitle.title = ""
-            }
-        }
-        
-        navBarScrollingFollowView.resetPreviousPoint(tableView)
     
 }
+extension ProfileTableViewController : UICollectionViewDataSource {
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        navBarScrollingFollowView.didEndScrolling()
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 12
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        navBarScrollingFollowView.didEndScrolling(decelerate)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as! StoryCollectionViewCell
+        return cell
+    }
+    
+    
+}
+
+extension ProfileTableViewController : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemsPerRow:CGFloat = 1
+        let hardCodedPadding:CGFloat = 5
+        let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
+        let itemHeight = itemWidth
+        return CGSize(width: itemWidth, height: itemHeight)
     }
 }

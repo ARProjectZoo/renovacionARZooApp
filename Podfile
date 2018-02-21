@@ -14,4 +14,5 @@ target 'renovacionARZoo' do
   pod 'Alamofire', '~> 4.5'
   pod 'Toaster'
   pod "Device", '~> 3.0.3'
+  pod 'AlamofireImage', '~> 3.3'
 end
