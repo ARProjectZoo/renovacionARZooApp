@@ -10,13 +10,20 @@ import UIKit
 import Device
 
 class CategoryRow : UITableViewCell {
+    var arrayAnimals : [Animals] = []
+    
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
 extension CategoryRow : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        if let arrayAnimals = UserDefaults.standard.array(forKey: "arrayAnimals"){
+            
+            return arrayAnimals.count
+        }else{
+            return 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

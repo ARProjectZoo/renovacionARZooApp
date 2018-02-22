@@ -10,15 +10,22 @@ import UIKit
 import Device
 
 class InformationViewController: UIViewController {
-    
+ let fileManager = FileManager.default
      var categories = ["Animales", "Eventos", "Restaurantes"]
     
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+//            do {
+//                let items = try fileManager.contentsOfDirectory(atPath: UserDefaults.standard.string(forKey: "arrayAnimalesPath")!)
+//                
+//                for item in items {
+//                    print("Found \(item)")
+//                }
+//            } catch {
+//                // failed to read directory – bad permissions, perhaps?
+//            }
         // Do any additional setup after loading the view.
     }
 

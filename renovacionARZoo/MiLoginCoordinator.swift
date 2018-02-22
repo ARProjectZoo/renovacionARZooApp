@@ -83,7 +83,7 @@ class MiLoginCoordinator: LoginCoordinator {
         myActivityIndicator.hidesWhenStopped = false
         
         let parameters : Parameters = [
-            "userEmail" : email,
+            "email" : email,
             "password" : password
         ]
         //Start Activity Indicator

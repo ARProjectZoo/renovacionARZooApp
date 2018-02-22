@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wJd-b2-3eF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginMain" id="BYZ-38-t0r" customClass="LoginViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,10 +82,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
-                                        <color key="value" red="0.21960784310000001" green="0.5568627451" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
-                                        <color key="value" red="0.21960784310000001" green="0.5568627451" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="0.66152076199999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
-                                                <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="0.72364619006849318" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="0.66152076199999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fadeAlpha">
                                                 <real key="value" value="0.0"/>
@@ -141,13 +141,13 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eUS-iJ-gDT">
-                                <rect key="frame" x="85" y="364" width="205" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="90" y="364" width="195" height="195"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="T0x-ha-g8b"/>
-                                    <constraint firstAttribute="width" constant="205" id="cYN-AA-laT"/>
+                                    <constraint firstAttribute="height" constant="195" id="T0x-ha-g8b"/>
+                                    <constraint firstAttribute="width" constant="195" id="cYN-AA-laT"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="10" id="mOT-rn-1WZ">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="mOT-rn-1WZ">
                                     <size key="itemSize" width="190" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -155,7 +155,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="storyCell" id="2M6-uR-L8b" customClass="StoryCollectionViewCell" customModule="renovacionARZoo" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="5" width="190" height="190"/>
+                                        <rect key="frame" x="5" y="2.5" width="190" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
@@ -176,6 +176,27 @@
                                             <segue destination="OW7-qf-uhg" kind="show" id="ros-v0-FMZ"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="noStoryCell" id="HSg-ms-feM">
+                                        <rect key="frame" x="200" y="2.5" width="190" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No tienes historias aun!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oE9-Pv-hue">
+                                                    <rect key="frame" x="5.5" y="84" width="179" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.039419416243654859" green="0.039419416243654859" blue="0.039419416243654859" alpha="0.78855415239726023" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="oE9-Pv-hue" firstAttribute="centerY" secondItem="HSg-ms-feM" secondAttribute="centerY" id="OAF-e5-CZB"/>
+                                            <constraint firstItem="oE9-Pv-hue" firstAttribute="centerX" secondItem="HSg-ms-feM" secondAttribute="centerX" id="ZHz-7N-zm3"/>
+                                        </constraints>
+                                    </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="a5S-cS-sPy" id="B4F-cu-S1l"/>
@@ -184,6 +205,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJg-Dt-EiX">
                                 <rect key="frame" x="317" y="557" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0057233279086266768" green="0.013378449414720883" blue="0.0061665802509721325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EHk-Sq-6oR"/>
                                     <constraint firstAttribute="width" constant="50" id="Og6-h6-Doz"/>
@@ -209,19 +231,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7cD-3C-sPt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="rt9-Tx-K3N"/>
+                    <navigationItem key="navigationItem" title="Profile" id="rt9-Tx-K3N">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="BDN-Qc-SCX">
+                            <connections>
+                                <action selector="logOut:" destination="a5S-cS-sPy" id="8BY-TS-FPw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="eUS-iJ-gDT" id="gFc-Ip-lwV"/>
                         <outlet property="floatingButton" destination="CJg-Dt-EiX" id="UnI-s0-WyA"/>
+                        <outlet property="navigationItem" destination="rt9-Tx-K3N" id="hqH-5h-HoR"/>
                         <outlet property="profilePictureIV" destination="lyM-I1-PxP" id="0hK-tw-bK2"/>
                         <outlet property="tabBarItemProfile" destination="K8Z-fF-qwD" id="Sec-Xt-pBZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY9-Jk-OOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="-651.72413793103453"/>
+            <point key="canvasLocation" x="1849" y="-652"/>
         </scene>
-        <!--Story Create View Controller-->
+        <!--Title-->
         <scene sceneID="Y5U-i7-jNj">
             <objects>
                 <viewController id="DNs-nn-qqS" customClass="StoryCreateViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
@@ -229,6 +258,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="SdV-n7-Xdy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="Ai3-9E-ZOG">
                                 <rect key="frame" x="87.5" y="114" width="200" height="200"/>
                                 <constraints>
@@ -271,11 +303,16 @@
                             <constraint firstItem="JC1-FO-7sE" firstAttribute="top" secondItem="Ai3-9E-ZOG" secondAttribute="bottom" constant="20" id="NSi-xI-9O1"/>
                             <constraint firstItem="4Ns-wr-9CJ" firstAttribute="centerX" secondItem="qNq-32-5eo" secondAttribute="centerX" id="RjV-gu-2PM"/>
                             <constraint firstItem="Ai3-9E-ZOG" firstAttribute="centerX" secondItem="qNq-32-5eo" secondAttribute="centerX" id="aV8-VY-mW2"/>
+                            <constraint firstAttribute="bottom" secondItem="SdV-n7-Xdy" secondAttribute="bottom" id="bgo-f6-QrT"/>
+                            <constraint firstItem="SdV-n7-Xdy" firstAttribute="leading" secondItem="qNq-32-5eo" secondAttribute="leading" id="hbm-kC-ENG"/>
                             <constraint firstItem="IHU-TY-abX" firstAttribute="bottom" secondItem="8fW-W9-CiM" secondAttribute="bottom" constant="20" id="mBT-EX-3zL"/>
+                            <constraint firstAttribute="trailing" secondItem="SdV-n7-Xdy" secondAttribute="trailing" id="np5-8y-3TT"/>
+                            <constraint firstItem="SdV-n7-Xdy" firstAttribute="top" secondItem="qNq-32-5eo" secondAttribute="top" id="ry4-ti-xkl"/>
                             <constraint firstItem="Ai3-9E-ZOG" firstAttribute="top" secondItem="IHU-TY-abX" secondAttribute="top" constant="50" id="yyq-Uj-lWc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IHU-TY-abX"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Znv-Zw-y7r"/>
                     <connections>
                         <outlet property="buttonStoryCreate" destination="8fW-W9-CiM" id="09o-wV-gBb"/>
                         <outlet property="commentStoryCreate" destination="JC1-FO-7sE" id="J8f-fk-4LN"/>
@@ -284,9 +321,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8c-m4-SSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="-1528.785607196402"/>
+            <point key="canvasLocation" x="2713" y="-1389"/>
         </scene>
-        <!--Story Collection View Controller-->
+        <!--Mis momentaZOOs-->
         <scene sceneID="Y26-QN-YxO">
             <objects>
                 <viewController id="OW7-qf-uhg" customClass="StoryCollectionViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
@@ -294,18 +331,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="Qp5-hP-xX8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZL2-V5-8Am">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="11" minimumInteritemSpacing="11" id="YyZ-A1-VQl">
+                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="YyZ-A1-VQl">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="32" minY="0.0" maxX="32" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="storyCollectionCell" id="MCI-K7-UBG" customClass="StoryCollectionViewCell" customModule="renovacionARZoo" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="0.0" width="150" height="150"/>
+                                        <rect key="frame" x="5" y="5" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -332,24 +372,85 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageStoryCell" destination="D5t-tn-4ns" id="deR-US-940"/>
+                                            <segue destination="RoP-wr-vMu" kind="show" id="ipp-Gs-uLO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="OW7-qf-uhg" id="N12-DL-9aM"/>
+                                    <outlet property="delegate" destination="OW7-qf-uhg" id="Npa-84-I6V"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZL2-V5-8Am" firstAttribute="trailing" secondItem="m97-3R-TjB" secondAttribute="trailing" id="7PJ-2V-1kJ"/>
+                            <constraint firstItem="Qp5-hP-xX8" firstAttribute="top" secondItem="GhI-lK-XE9" secondAttribute="top" id="FUQ-ld-izX"/>
                             <constraint firstAttribute="bottom" secondItem="ZL2-V5-8Am" secondAttribute="bottom" id="LOr-8n-0hd"/>
-                            <constraint firstItem="ZL2-V5-8Am" firstAttribute="top" secondItem="m97-3R-TjB" secondAttribute="top" id="VQY-sG-wdi"/>
+                            <constraint firstItem="Qp5-hP-xX8" firstAttribute="trailing" secondItem="m97-3R-TjB" secondAttribute="trailing" id="Ubd-Wh-IC0"/>
+                            <constraint firstItem="ZL2-V5-8Am" firstAttribute="top" secondItem="m97-3R-TjB" secondAttribute="top" constant="10" id="VQY-sG-wdi"/>
+                            <constraint firstAttribute="bottom" secondItem="Qp5-hP-xX8" secondAttribute="bottom" id="gec-Yg-dTo"/>
                             <constraint firstItem="ZL2-V5-8Am" firstAttribute="leading" secondItem="m97-3R-TjB" secondAttribute="leading" id="hJ5-UW-YaZ"/>
+                            <constraint firstItem="Qp5-hP-xX8" firstAttribute="leading" secondItem="m97-3R-TjB" secondAttribute="leading" id="lJ0-St-vrg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m97-3R-TjB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Mis momentaZOOs" id="7bG-XU-oWb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZL2-V5-8Am" id="gpf-A6-kbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0g-iL-rJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="-650"/>
+            <point key="canvasLocation" x="2783" y="-651"/>
+        </scene>
+        <!--Detail Story View Controller-->
+        <scene sceneID="FJh-sD-nup">
+            <objects>
+                <viewController id="RoP-wr-vMu" customClass="DetailStoryViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R3s-Vb-toz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="86K-mX-ImA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-ZS-gbd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M2C-Rg-7Y8">
+                                    <size key="itemSize" width="200" height="300"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RoP-wr-vMu" id="9Re-tb-cAm"/>
+                                    <outlet property="delegate" destination="RoP-wr-vMu" id="WMl-cS-npz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iWd-ZS-gbd" firstAttribute="top" secondItem="UYL-UK-e4O" secondAttribute="top" id="2rV-M1-atw"/>
+                            <constraint firstItem="UYL-UK-e4O" firstAttribute="trailing" secondItem="86K-mX-ImA" secondAttribute="trailing" id="CfT-kC-rkO"/>
+                            <constraint firstItem="UYL-UK-e4O" firstAttribute="bottom" secondItem="iWd-ZS-gbd" secondAttribute="bottom" id="DFx-3N-oZd"/>
+                            <constraint firstItem="iWd-ZS-gbd" firstAttribute="leading" secondItem="UYL-UK-e4O" secondAttribute="leading" id="JDk-2Z-e9z"/>
+                            <constraint firstItem="UYL-UK-e4O" firstAttribute="trailing" secondItem="iWd-ZS-gbd" secondAttribute="trailing" id="Wnj-ir-3Yc"/>
+                            <constraint firstItem="UYL-UK-e4O" firstAttribute="bottom" secondItem="86K-mX-ImA" secondAttribute="bottom" id="Yfq-ge-Y2c"/>
+                            <constraint firstItem="86K-mX-ImA" firstAttribute="top" secondItem="UYL-UK-e4O" secondAttribute="top" id="g5t-yx-SGP"/>
+                            <constraint firstItem="86K-mX-ImA" firstAttribute="leading" secondItem="UYL-UK-e4O" secondAttribute="leading" id="wMI-3U-Wsz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UYL-UK-e4O"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="iWd-ZS-gbd" id="KW0-nb-y8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kV-Yc-71O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3606" y="-651"/>
         </scene>
         <!--Information-->
         <scene sceneID="UQn-WO-0LP">
@@ -372,9 +473,9 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="145" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ud9-ND-SY0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="aqG-2a-hsP" customClass="CategoryRow" customModule="renovacionARZoo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="aqG-2a-hsP" customClass="CategoryRow" customModule="renovacionARZoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqG-2a-hsP" id="WHW-lo-1LF">
@@ -383,7 +484,7 @@
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KVS-AL-nVm">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="j3C-7H-aqF">
                                                         <size key="itemSize" width="134.5" height="134.5"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -467,6 +568,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-gN-aTy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOr-hL-yVF">
                                 <rect key="frame" x="47" y="369" width="280" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -482,12 +586,18 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cOX-gN-aTy" firstAttribute="leading" secondItem="mb9-Zw-zVf" secondAttribute="leading" id="695-7e-6Dv"/>
+                            <constraint firstAttribute="trailing" secondItem="cOX-gN-aTy" secondAttribute="trailing" id="CQh-R4-6jF"/>
+                            <constraint firstItem="cOX-gN-aTy" firstAttribute="top" secondItem="mb9-Zw-zVf" secondAttribute="top" id="ebv-dQ-rGL"/>
+                            <constraint firstAttribute="bottom" secondItem="cOX-gN-aTy" secondAttribute="bottom" id="rXq-nR-EUk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wlT-so-ftF"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3d-yB-SS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="1069"/>
+            <point key="canvasLocation" x="2100" y="1069"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0Bw-Yo-nVQ">

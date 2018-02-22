@@ -9,22 +9,38 @@
 import UIKit
 class ProfileTableViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    var numberOfStories = 4
+    
     @IBOutlet weak var profilePictureIV: UIImageView!
     @IBOutlet weak var floatingButton: UIButton!
     
-
+    
+    var storiesArray : [Story] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     
     @IBOutlet weak var tabBarItemProfile: UITabBarItem!
     
+    @IBAction func logOut(_ sender: Any) {
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
+        UserDefaults.standard.set(false, forKey: "status")
+        UserDefaults.standard.synchronize()
+        Switcher.updateRootVC()
+    }
     
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var imagePicked : UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let stories = UserDefaults.standard.array(forKey: "stories"){
+            storiesArray = stories as! [Story]
+        }else{
+            storiesArray = []
+        }
         imagePicker.delegate = self
         profilePictureIV.layer.cornerRadius = profilePictureIV.frame.size.width / 2
         profilePictureIV.clipsToBounds = true
@@ -98,24 +114,40 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
 extension ProfileTableViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        if(numberOfStories == 0){
+            return 1
+        }else{
+            return numberOfStories
+        }
     }
+        
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as! StoryCollectionViewCell
-        return cell
+        if(numberOfStories == 0){
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noStoryCell", for: indexPath)
+            return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as! StoryCollectionViewCell
+            return cell
+        }
     }
-    
-    
 }
 
 extension ProfileTableViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 1
-        let hardCodedPadding:CGFloat = 5
+        let hardCodedPadding:CGFloat = 7
         let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
         let itemHeight = itemWidth
         return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let item = sender as? UICollectionViewCell
+//        let indexPath = collectionView.indexPath(for: item!)
+//        let detailVC = segue.destination as! StoryCreateViewController
+//        detailVC.storyToDetail = storiesArray[(indexPath?.row)!]
+//        detailVC.detailDescription = storiesArray[(indexPath?.row)!].description
     }
 }

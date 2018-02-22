@@ -17,13 +17,14 @@ class StoryCreateViewController: UIViewController, UINavigationControllerDelegat
     
     //CONSTRAINTS
     @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
-    
+    var storyToDetail : Story!
     //camera
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var imagePicked : UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         checkDeviceScreenSize()
         imagePicker.delegate = self
         
