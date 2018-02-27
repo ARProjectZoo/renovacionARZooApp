@@ -9,32 +9,37 @@
 import UIKit
 import Device
 
-class CategoryRow : UITableViewCell {
+class AnimalsRow : UITableViewCell {
     var arrayAnimals : [Animals] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
-extension CategoryRow : UICollectionViewDataSource {
+extension AnimalsRow : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let arrayAnimals = UserDefaults.standard.array(forKey: "arrayAnimals"){
-            
-            return arrayAnimals.count
-        }else{
-            return 1
-        }
+//        if let arrayAnimals = UserDefaults.standard.array(forKey: "arrayAnimals"){
+//
+//            return arrayAnimales.count
+//        }else{
+//            return arrayAnimals.count
+//        }
+        return arrayContinentes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath) as! VideoCell
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "continentsCollectionCell", for: indexPath) as! continentsCollectionCell
+        cell.imageView.image = arrayContinentes[indexPath.row].image
+        cell.imageView.layer.cornerRadius = cell.frame.size.width / 2
+        cell.imageView.clipsToBounds = true
         return cell
     }
     
     
 }
 
-extension CategoryRow : UICollectionViewDelegateFlowLayout {
+extension AnimalsRow : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow:CGFloat = checkDeviceScreenSize()

@@ -36,6 +36,7 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let stories = UserDefaults.standard.array(forKey: "stories"){
             storiesArray = stories as! [Story]
         }else{
@@ -114,10 +115,10 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
 extension ProfileTableViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if(numberOfStories == 0){
+        if(arrayStories.count < 1){
             return 1
         }else{
-            return numberOfStories
+            return arrayStories.count
         }
     }
         
@@ -128,6 +129,7 @@ extension ProfileTableViewController : UICollectionViewDataSource {
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as! StoryCollectionViewCell
+            //cell.imageStoryCell.image = arrayStories[indexPath.row].image
             return cell
         }
     }

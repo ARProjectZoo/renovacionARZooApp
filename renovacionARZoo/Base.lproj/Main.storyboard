@@ -75,11 +75,11 @@
             <objects>
                 <viewController id="a5S-cS-sPy" userLabel="Profile" customClass="ProfileTableViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0J-pE-i4o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondoProfile" translatesAutoresizingMaskIntoConstraints="NO" id="BD9-Ov-5ZU" customClass="GradientImageView" customModule="renovacionARZoo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
                                         <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,7 +90,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pj-Rb6" customClass="ScrollingFollowView" customModule="renovacionARZoo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondozoo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51d-n5-87w" customClass="GradientImageView" customModule="renovacionARZoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
@@ -113,8 +113,8 @@
                                             <constraint firstAttribute="width" constant="100" id="ITx-pv-905"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGV-qt-Nel">
-                                        <rect key="frame" x="144" y="197" width="86" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGV-qt-Nel">
+                                        <rect key="frame" x="149.5" y="197" width="75" height="21"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eUS-iJ-gDT">
-                                <rect key="frame" x="90" y="364" width="195" height="195"/>
+                                <rect key="frame" x="90" y="300" width="195" height="195"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="T0x-ha-g8b"/>
@@ -161,7 +161,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondoInfo" translatesAutoresizingMaskIntoConstraints="NO" id="S7f-Si-aM3">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondoInfo" translatesAutoresizingMaskIntoConstraints="NO" id="S7f-Si-aM3">
                                                     <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                 </imageView>
                                             </subviews>
@@ -204,8 +204,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJg-Dt-EiX">
-                                <rect key="frame" x="317" y="557" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.0057233279086266768" green="0.013378449414720883" blue="0.0061665802509721325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="317" y="494" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EHk-Sq-6oR"/>
                                     <constraint firstAttribute="width" constant="50" id="Og6-h6-Doz"/>
@@ -219,18 +218,19 @@
                         <constraints>
                             <constraint firstItem="BD9-Ov-5ZU" firstAttribute="leading" secondItem="7cD-3C-sPt" secondAttribute="leading" id="4Aw-00-jof"/>
                             <constraint firstItem="eUS-iJ-gDT" firstAttribute="top" secondItem="VgV-Pj-Rb6" secondAttribute="bottom" constant="50" id="5ja-tw-wQn"/>
-                            <constraint firstItem="BD9-Ov-5ZU" firstAttribute="top" secondItem="e0J-pE-i4o" secondAttribute="top" id="Ft6-K9-60r"/>
                             <constraint firstAttribute="trailing" secondItem="BD9-Ov-5ZU" secondAttribute="trailing" id="OQt-yI-zc7"/>
                             <constraint firstAttribute="trailing" secondItem="CJg-Dt-EiX" secondAttribute="trailing" constant="8" id="OsQ-es-syl"/>
                             <constraint firstItem="VgV-Pj-Rb6" firstAttribute="trailing" secondItem="7cD-3C-sPt" secondAttribute="trailing" id="R3H-wZ-E9C"/>
                             <constraint firstItem="VgV-Pj-Rb6" firstAttribute="top" secondItem="7cD-3C-sPt" secondAttribute="top" id="ajx-ml-Eux"/>
                             <constraint firstItem="VgV-Pj-Rb6" firstAttribute="leading" secondItem="7cD-3C-sPt" secondAttribute="leading" id="arc-3l-9xH"/>
                             <constraint firstAttribute="bottom" secondItem="BD9-Ov-5ZU" secondAttribute="bottom" id="c95-dv-H4n"/>
-                            <constraint firstAttribute="bottom" secondItem="CJg-Dt-EiX" secondAttribute="bottom" constant="60" id="jx9-wk-WKh"/>
+                            <constraint firstAttribute="bottom" secondItem="CJg-Dt-EiX" secondAttribute="bottom" constant="10" id="jx9-wk-WKh"/>
                             <constraint firstItem="eUS-iJ-gDT" firstAttribute="centerX" secondItem="e0J-pE-i4o" secondAttribute="centerX" id="lb8-EH-uxE"/>
+                            <constraint firstItem="BD9-Ov-5ZU" firstAttribute="top" secondItem="e0J-pE-i4o" secondAttribute="top" id="rGM-bg-DYp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7cD-3C-sPt"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Profile" id="rt9-Tx-K3N">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="BDN-Qc-SCX">
                             <connections>
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY9-Jk-OOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="-652"/>
+            <point key="canvasLocation" x="1009" y="-652"/>
         </scene>
         <!--Title-->
         <scene sceneID="Y5U-i7-jNj">
@@ -372,7 +372,6 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageStoryCell" destination="D5t-tn-4ns" id="deR-US-940"/>
-                                            <segue destination="RoP-wr-vMu" kind="show" id="ipp-Gs-uLO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -402,27 +401,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0g-iL-rJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2783" y="-651"/>
+            <point key="canvasLocation" x="2713" y="-654"/>
         </scene>
         <!--Detail Story View Controller-->
         <scene sceneID="FJh-sD-nup">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kV-Yc-71O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RoP-wr-vMu" customClass="DetailStoryViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R3s-Vb-toz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="86K-mX-ImA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-ZS-gbd">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M2C-Rg-7Y8">
-                                    <size key="itemSize" width="200" height="300"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="M2C-Rg-7Y8">
+                                    <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
@@ -448,9 +447,8 @@
                         <outlet property="collectionView" destination="iWd-ZS-gbd" id="KW0-nb-y8G"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8kV-Yc-71O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3606" y="-651"/>
+            <point key="canvasLocation" x="3552.8000000000002" y="-653.52323838080963"/>
         </scene>
         <!--Information-->
         <scene sceneID="UQn-WO-0LP">
@@ -475,7 +473,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="aqG-2a-hsP" customClass="CategoryRow" customModule="renovacionARZoo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="continentsCell" id="aqG-2a-hsP" customClass="AnimalsRow" customModule="renovacionARZoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqG-2a-hsP" id="WHW-lo-1LF">
@@ -492,7 +490,7 @@
                                                         <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="wXU-65-fJt" customClass="VideoCell" customModule="renovacionARZoo" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="continentsCollectionCell" id="wXU-65-fJt" customClass="continentsCollectionCell" customModule="renovacionARZoo" customModuleProvider="target">
                                                             <rect key="frame" x="5" y="5" width="134.5" height="134.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -501,10 +499,10 @@
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBA-se-jAf">
                                                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="134.5"/>
+                                                                        <color key="backgroundColor" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </imageView>
                                                                 </subviews>
                                                             </view>
-                                                            <color key="backgroundColor" red="0.0070286538289999999" green="1" blue="0.1570895145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="xBA-se-jAf" secondAttribute="bottom" id="0Sf-QV-nOb"/>
                                                                 <constraint firstItem="xBA-se-jAf" firstAttribute="top" secondItem="wXU-65-fJt" secondAttribute="top" id="WNd-Dr-g6E"/>
@@ -513,7 +511,7 @@
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="xBA-se-jAf" id="TB8-gh-Gy2"/>
-                                                                <segue destination="seF-Q2-CE1" kind="show" id="YUb-jE-LYz"/>
+                                                                <segue destination="seF-Q2-CE1" kind="show" id="Wd4-Lq-HC2"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -528,6 +526,114 @@
                                                 <constraint firstAttribute="bottom" secondItem="KVS-AL-nVm" secondAttribute="bottom" id="WF9-Sq-V8b"/>
                                                 <constraint firstAttribute="trailing" secondItem="KVS-AL-nVm" secondAttribute="trailing" id="sSL-1s-LZM"/>
                                                 <constraint firstItem="KVS-AL-nVm" firstAttribute="top" secondItem="WHW-lo-1LF" secondAttribute="top" id="y8A-XQ-xcw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exhibitionCell" id="ZhI-Pa-NBR" customClass="exhibitionRow" customModule="renovacionARZoo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="173" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZhI-Pa-NBR" id="oVf-zC-xdq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dwG-vY-RMd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="L8U-gy-sjP">
+                                                        <size key="itemSize" width="134.5" height="134.5"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="exhibitionCollectionCell" id="TYr-3u-QYM" customClass="exhibitionCollectionCell" customModule="renovacionARZoo" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="134.5" height="134.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="134.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1c-0F-nen">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="134.5"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="n1c-0F-nen" secondAttribute="trailing" id="82p-XU-CJV"/>
+                                                                <constraint firstItem="n1c-0F-nen" firstAttribute="leading" secondItem="TYr-3u-QYM" secondAttribute="leading" id="Cg7-le-UVT"/>
+                                                                <constraint firstAttribute="bottom" secondItem="n1c-0F-nen" secondAttribute="bottom" id="c7R-ma-Sr9"/>
+                                                                <constraint firstItem="n1c-0F-nen" firstAttribute="top" secondItem="TYr-3u-QYM" secondAttribute="top" id="xKm-2T-7TX"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="n1c-0F-nen" id="D2g-bl-vYk"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="ZhI-Pa-NBR" id="CBX-p9-8sf"/>
+                                                        <outlet property="delegate" destination="ZhI-Pa-NBR" id="18F-uj-4f3"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="dwG-vY-RMd" secondAttribute="bottom" id="2ht-1A-xlr"/>
+                                                <constraint firstItem="dwG-vY-RMd" firstAttribute="top" secondItem="oVf-zC-xdq" secondAttribute="top" id="VJc-cd-iIN"/>
+                                                <constraint firstItem="dwG-vY-RMd" firstAttribute="leading" secondItem="oVf-zC-xdq" secondAttribute="leading" id="W9X-gI-1OI"/>
+                                                <constraint firstAttribute="trailing" secondItem="dwG-vY-RMd" secondAttribute="trailing" id="hLM-N1-4Vu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventsCell" id="VXm-ye-u9k" customClass="eventsRow" customModule="renovacionARZoo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="318" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VXm-ye-u9k" id="9kn-SB-alt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rM5-DH-VdE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="NpL-kX-nFg">
+                                                        <size key="itemSize" width="134.5" height="134.5"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="eventsCollectionCell" id="sd4-eH-8Oo" customClass="eventsCollectionCell" customModule="renovacionARZoo" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="134.5" height="134.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="134.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdy-8u-vTN">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="134.5"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="Mdy-8u-vTN" firstAttribute="leading" secondItem="sd4-eH-8Oo" secondAttribute="leading" id="LbG-1C-7x2"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Mdy-8u-vTN" secondAttribute="bottom" id="Vbj-tN-kcA"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Mdy-8u-vTN" secondAttribute="trailing" id="iMr-Ez-dUa"/>
+                                                                <constraint firstItem="Mdy-8u-vTN" firstAttribute="top" secondItem="sd4-eH-8Oo" secondAttribute="top" id="nSy-md-sk6"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="Mdy-8u-vTN" id="Lyv-M8-TYH"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="VXm-ye-u9k" id="htJ-Sr-M7M"/>
+                                                        <outlet property="delegate" destination="VXm-ye-u9k" id="2rc-AB-Qck"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rM5-DH-VdE" firstAttribute="leading" secondItem="9kn-SB-alt" secondAttribute="leading" id="05v-JF-a0d"/>
+                                                <constraint firstAttribute="trailing" secondItem="rM5-DH-VdE" secondAttribute="trailing" id="Jx3-dV-ryV"/>
+                                                <constraint firstItem="rM5-DH-VdE" firstAttribute="top" secondItem="9kn-SB-alt" secondAttribute="top" id="KgW-lL-mSO"/>
+                                                <constraint firstAttribute="bottom" secondItem="rM5-DH-VdE" secondAttribute="bottom" id="NcK-GG-SWa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -558,7 +664,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQs-te-9EK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="1069"/>
+            <point key="canvasLocation" x="1009" y="1012"/>
         </scene>
         <!--Animal List View Controller-->
         <scene sceneID="rk8-zc-9Hw">
@@ -597,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3d-yB-SS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="1069"/>
+            <point key="canvasLocation" x="2508" y="1012"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0Bw-Yo-nVQ">
@@ -637,7 +743,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUf-Kc-OUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="1070"/>
+            <point key="canvasLocation" x="92" y="1012"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Azi-5P-7FL">
@@ -658,7 +764,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6e-jS-Kuh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873" y="-650"/>
+            <point key="canvasLocation" x="92" y="-653"/>
         </scene>
     </scenes>
     <resources>

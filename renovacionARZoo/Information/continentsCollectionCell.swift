@@ -8,7 +8,8 @@
 
 import UIKit
 
-class VideoCell : UICollectionViewCell {
+class continentsCollectionCell : UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
 }

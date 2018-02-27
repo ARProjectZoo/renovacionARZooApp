@@ -10,7 +10,7 @@ import UIKit
 
 class DetailStoryViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    //@IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,27 +34,28 @@ class DetailStoryViewController: UIViewController {
     */
 
 }
-extension DetailStoryViewController : UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "detailStoryCollectionCell", for: indexPath) as! DetailStoryCollectionViewCell
-        return cell
-    }
-    
-    
-}
+//extension DetailStoryViewController : UICollectionViewDataSource {
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 12
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "detailStoryCollectionCell", for: indexPath) as! DetailStoryCollectionViewCell
+//        return cell
+//    }
+//
+//
+//}
+//
+//extension DetailStoryViewController : UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let itemsPerRow:CGFloat = 1
+//        let hardCodedPadding:CGFloat = 10
+//        let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
+//        let itemHeight = itemWidth
+//        return CGSize(width: itemWidth, height: itemHeight)
+//    }
+//}
 
-extension DetailStoryViewController : UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemsPerRow:CGFloat = 1
-        let hardCodedPadding:CGFloat = 10
-        let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
-        let itemHeight = itemWidth
-        return CGSize(width: itemWidth, height: itemHeight)
-    }
-}

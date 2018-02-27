@@ -17,6 +17,7 @@ class InformationViewController: UIViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
+            tableView.backgroundView?.alpha = 0
 //            do {
 //                let items = try fileManager.contentsOfDirectory(atPath: UserDefaults.standard.string(forKey: "arrayAnimalesPath")!)
 //                
@@ -66,8 +67,19 @@ extension InformationViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell") as! CategoryRow
-        return cell
+        if(indexPath.section == 0){
+            print("INDEXPATH ===== 0::::::::::::")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "continentsCell") as! AnimalsRow
+            return cell
+        }else if(indexPath.section == 1){
+             print("INDEXPATH ===== 1::::::::::::")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "exhibitionCell") as! exhibitionRow
+            return cell
+        }else {
+             print("INDEXPATH ===== 2::::::::::::")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "eventsCell") as! eventsRow
+            return cell
+        }
     }
     
 }

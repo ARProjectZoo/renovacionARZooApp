@@ -66,9 +66,14 @@
 		6F69CA31203F116A007CCDA6 /* PasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E00D202C9DFD0071EDCC /* PasswordViewController.xib */; };
 		6F69CA32203F116E007CCDA6 /* LoginViewControllerCoordinator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E00E202C9DFD0071EDCC /* LoginViewControllerCoordinator.xib */; };
 		6F69CA33203F1171007CCDA6 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5E011202C9DFD0071EDCC /* SignupViewController.xib */; };
+		6FB7A70D203F23B9001D0183 /* exhibitionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB7A70C203F23B9001D0183 /* exhibitionRow.swift */; };
+		6FB7A70F203F2438001D0183 /* eventsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB7A70E203F2438001D0183 /* eventsRow.swift */; };
+		6FB7A711203F24A5001D0183 /* Continents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB7A710203F24A5001D0183 /* Continents.swift */; };
+		6FB7A713203F2B81001D0183 /* exhibitionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB7A712203F2B81001D0183 /* exhibitionCollectionCell.swift */; };
+		6FB7A715203F2B94001D0183 /* eventsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB7A714203F2B94001D0183 /* eventsCollectionCell.swift */; };
 		6FE2CB8F203CAE2F00437100 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB8E203CAE2F00437100 /* InformationViewController.swift */; };
-		6FE2CB93203CAE4C00437100 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB91203CAE4C00437100 /* VideoCell.swift */; };
-		6FE2CB94203CAE4C00437100 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB92203CAE4C00437100 /* CategoryRow.swift */; };
+		6FE2CB93203CAE4C00437100 /* continentsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB91203CAE4C00437100 /* continentsCollectionCell.swift */; };
+		6FE2CB94203CAE4C00437100 /* AnimalsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB92203CAE4C00437100 /* AnimalsRow.swift */; };
 		6FE2CB96203D875D00437100 /* AnimalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2CB95203D875D00437100 /* AnimalListViewController.swift */; };
 		6FF5DFFA202C9DB70071EDCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5DFF9202C9DB70071EDCC /* AppDelegate.swift */; };
 		6FF5DFFC202C9DB70071EDCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5DFFB202C9DB70071EDCC /* LoginViewController.swift */; };
@@ -161,9 +166,14 @@
 		6F69CA2A203EEB6C007CCDA6 /* DetailStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6F69CA2C203EED0E007CCDA6 /* DetailStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoryViewController.swift; sourceTree = "<group>"; };
 		6F69CA2E203EF325007CCDA6 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
+		6FB7A70C203F23B9001D0183 /* exhibitionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exhibitionRow.swift; sourceTree = "<group>"; };
+		6FB7A70E203F2438001D0183 /* eventsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventsRow.swift; sourceTree = "<group>"; };
+		6FB7A710203F24A5001D0183 /* Continents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continents.swift; sourceTree = "<group>"; };
+		6FB7A712203F2B81001D0183 /* exhibitionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exhibitionCollectionCell.swift; sourceTree = "<group>"; };
+		6FB7A714203F2B94001D0183 /* eventsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventsCollectionCell.swift; sourceTree = "<group>"; };
 		6FE2CB8E203CAE2F00437100 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		6FE2CB91203CAE4C00437100 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
-		6FE2CB92203CAE4C00437100 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		6FE2CB91203CAE4C00437100 /* continentsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = continentsCollectionCell.swift; sourceTree = "<group>"; };
+		6FE2CB92203CAE4C00437100 /* AnimalsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsRow.swift; sourceTree = "<group>"; };
 		6FE2CB95203D875D00437100 /* AnimalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListViewController.swift; sourceTree = "<group>"; };
 		6FF5DFF6202C9DB70071EDCC /* renovacionARZoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = renovacionARZoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF5DFF9202C9DB70071EDCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -303,9 +313,13 @@
 			isa = PBXGroup;
 			children = (
 				6FE2CB8E203CAE2F00437100 /* InformationViewController.swift */,
-				6FE2CB92203CAE4C00437100 /* CategoryRow.swift */,
-				6FE2CB91203CAE4C00437100 /* VideoCell.swift */,
 				6FE2CB95203D875D00437100 /* AnimalListViewController.swift */,
+				6FE2CB92203CAE4C00437100 /* AnimalsRow.swift */,
+				6FB7A70C203F23B9001D0183 /* exhibitionRow.swift */,
+				6FB7A70E203F2438001D0183 /* eventsRow.swift */,
+				6FE2CB91203CAE4C00437100 /* continentsCollectionCell.swift */,
+				6FB7A712203F2B81001D0183 /* exhibitionCollectionCell.swift */,
+				6FB7A714203F2B94001D0183 /* eventsCollectionCell.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -373,6 +387,7 @@
 				6F0EAF632031E49000FA1CBB /* Stories.swift */,
 				6F69CA20203DBE6B007CCDA6 /* Animals.swift */,
 				6F69CA22203DBE76007CCDA6 /* Elements.swift */,
+				6FB7A710203F24A5001D0183 /* Continents.swift */,
 			);
 			name = Clases;
 			path = ../../iOs/loginTEST/perfilTESTS/perfilTESTS/Clases;
@@ -409,8 +424,7 @@
 				6FF5E028202C9DFD0071EDCC /* FacebookService.swift */,
 				6FF5E029202C9DFD0071EDCC /* SkyFloatingLabelTextFieldWithIcon.swift */,
 			);
-			name = LOGINKIT;
-			path = ../../miloginKit/miloginKit/LOGINKIT;
+			path = LOGINKIT;
 			sourceTree = "<group>";
 		};
 		6FF5E056202CCBC30071EDCC /* Profile */ = {
@@ -635,11 +649,13 @@
 			files = (
 				6FF5E040202C9DFE0071EDCC /* LoginViewControllerCoordinator.swift in Sources */,
 				6FE2CB8F203CAE2F00437100 /* InformationViewController.swift in Sources */,
-				6FE2CB94203CAE4C00437100 /* CategoryRow.swift in Sources */,
+				6FE2CB94203CAE4C00437100 /* AnimalsRow.swift in Sources */,
+				6FB7A715203F2B94001D0183 /* eventsCollectionCell.swift in Sources */,
 				6F520512203495BA00167CEA /* StoryCreateViewController.swift in Sources */,
 				6F0EAF582031B66100FA1CBB /* OverLayView.swift in Sources */,
 				6F69CA2B203EEB6C007CCDA6 /* DetailStoryCollectionViewCell.swift in Sources */,
 				6FF5E03D202C9DFE0071EDCC /* UITextField+fixCaretPosition.swift in Sources */,
+				6FB7A70F203F2438001D0183 /* eventsRow.swift in Sources */,
 				6FF5E039202C9DFE0071EDCC /* ChangePasswordViewController.swift in Sources */,
 				6F5205102034912400167CEA /* StoryCollectionViewCell.swift in Sources */,
 				6FF5E03C202C9DFE0071EDCC /* InitialViewController.swift in Sources */,
@@ -649,18 +665,21 @@
 				6FF5E033202C9DFE0071EDCC /* Responses.swift in Sources */,
 				6FF5E038202C9DFE0071EDCC /* LoginCoordinator.swift in Sources */,
 				6F69CA21203DBE6B007CCDA6 /* Animals.swift in Sources */,
+				6FB7A711203F24A5001D0183 /* Continents.swift in Sources */,
 				6F0EAF622031B6CF00FA1CBB /* ProfileTableViewController.swift in Sources */,
 				6FF5E04B202C9EA70071EDCC /* appTools.swift in Sources */,
 				6FF5E037202C9DFE0071EDCC /* BackgroundMover.swift in Sources */,
 				6F69CA2D203EED0E007CCDA6 /* DetailStoryViewController.swift in Sources */,
 				6F0EAF5C2031B66100FA1CBB /* KYButton.swift in Sources */,
 				6FF5DFFC202C9DB70071EDCC /* LoginViewController.swift in Sources */,
+				6FB7A70D203F23B9001D0183 /* exhibitionRow.swift in Sources */,
 				6FF5E03E202C9DFE0071EDCC /* ValidatorService.swift in Sources */,
+				6FB7A713203F2B81001D0183 /* exhibitionCollectionCell.swift in Sources */,
 				6FE2CB96203D875D00437100 /* AnimalListViewController.swift in Sources */,
 				6F0EAF5A2031B66100FA1CBB /* ButtonLayer.swift in Sources */,
 				6F69CA23203DBE76007CCDA6 /* Elements.swift in Sources */,
 				6F0EAF592031B66100FA1CBB /* KYButtonCells.swift in Sources */,
-				6FE2CB93203CAE4C00437100 /* VideoCell.swift in Sources */,
+				6FE2CB93203CAE4C00437100 /* continentsCollectionCell.swift in Sources */,
 				6F0EAF5B2031B66100FA1CBB /* KYButtonDelegate.swift in Sources */,
 				6F0EAF602031B6AE00FA1CBB /* TableViewCell.swift in Sources */,
 				6F0EAF642031E49000FA1CBB /* Stories.swift in Sources */,
