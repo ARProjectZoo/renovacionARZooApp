@@ -376,8 +376,7 @@
 				6FF5E011202C9DFD0071EDCC /* SignupViewController.xib */,
 				6FF5E012202C9DFD0071EDCC /* ChangePasswordViewController.xib */,
 			);
-			name = Resources;
-			path = ../../miloginKit/miloginKit/Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6FF5E013202C9DFD0071EDCC /* Clases */ = {
@@ -389,8 +388,7 @@
 				6F69CA22203DBE76007CCDA6 /* Elements.swift */,
 				6FB7A710203F24A5001D0183 /* Continents.swift */,
 			);
-			name = Clases;
-			path = ../../iOs/loginTEST/perfilTESTS/perfilTESTS/Clases;
+			path = Clases;
 			sourceTree = "<group>";
 		};
 		6FF5E015202C9DFD0071EDCC /* Requests */ = {
@@ -399,8 +397,7 @@
 				6FF5E016202C9DFD0071EDCC /* Requests.swift */,
 				6FF5E017202C9DFD0071EDCC /* Responses.swift */,
 			);
-			name = Requests;
-			path = ../../iOs/loginTEST/perfilTESTS/perfilTESTS/Requests;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		6FF5E018202C9DFD0071EDCC /* LOGINKIT */ = {
