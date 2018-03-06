@@ -94,7 +94,7 @@ class ChangePasswordViewController: UIViewController, BackgroundMovable, Keyboar
         logoImageView.image = config.secondaryLogoImage
         
         changePasswordButton.setTitle(config.changePasswordButtonText, for: .normal)
-            changePasswordButton.setTitleColor(config.tintColor, for: .normal)
+            changePasswordButton.setTitleColor(config.buttonInnerColor, for: .normal)
     }
     
     func setupFonts() {

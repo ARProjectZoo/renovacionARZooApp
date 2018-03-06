@@ -107,7 +107,7 @@ class LoginViewControllerCoordinator: UIViewController, BackgroundMovable, Keybo
         passwordTextField.errorColor = config.errorTintColor
         
         loginButton.setTitle(config.loginButtonText, for: .normal)
-        loginButton.setTitleColor(config.tintColor, for: .normal)
+        loginButton.setTitleColor(config.buttonInnerColor, for: .normal)
         forgotPasswordButton.isHidden = !config.shouldShowForgotPassword
         forgotPasswordButton.setTitle(config.forgotPasswordButtonText, for: .normal)
         

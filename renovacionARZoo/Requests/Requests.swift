@@ -38,11 +38,12 @@ class Request {
         let urlRequest = mainURL + "/Users/login.json"
         
         Alamofire.request(urlRequest, method : .post, parameters : parameters, headers : self.headers).responseJSON { response in
-            //debugPrint(response)
+            debugPrint(response)
             if let json = response.result.value {
                 let data = Responses(json: (json as! NSDictionary) as! [String : Any])
                 removeActivityIndicator(activityIndicator: self.myActivityIndicator)
                 switch(data.code){
+                    
                 case 200:
                     let recivedData = data.data as! NSDictionary
                     print(recivedData)

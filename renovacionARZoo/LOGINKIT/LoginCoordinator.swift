@@ -17,6 +17,7 @@ protocol ConfigurationSource: class {
     
     var tintColor: UIColor { get }
     var errorTintColor: UIColor { get }
+    var buttonInnerColor : UIColor{ get }
     
     var signupButtonText: String { get }
     var loginButtonText: String { get }
@@ -52,9 +53,11 @@ open class LoginCoordinator: ConfigurationSource {
     
     public var secondaryLogoImage = UIImage()
     
-    public var tintColor = UIColor(red: 185.0 / 255.0, green: 117.0 / 255.0, blue: 216.0 / 255.0, alpha: 1)
+    public var tintColor = UIColor(red: 253 / 255.0, green: 253 / 255.0, blue: 253 / 255.0, alpha: 1)
     
     public var errorTintColor = UIColor(red: 241 / 255, green: 196 / 255 , blue: 15 / 255, alpha: 1)
+    
+    public var buttonInnerColor = UIColor(red: 253/255, green: 253/255, blue: 253/255, alpha: 1)
     
     public var signupButtonText = "Sign Up"
     

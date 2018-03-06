@@ -87,20 +87,16 @@ class InitialViewController: UIViewController, BackgroundMovable {
         backgroundImageView.image = config.backgroundImage
         logoImageView.image = config.mainLogoImage
         
-        signupButton.setTitle(config.signupButtonText, for: .normal)
-        signupButton.setTitleColor(config.tintColor, for: .normal)
-        signupButton.borderColor = config.tintColor.withAlphaComponent(0.25)
         
         loginButton.setTitle(config.loginButtonText, for: .normal)
-        loginButton.setTitleColor(config.tintColor, for: .normal)
-        loginButton.borderColor = config.tintColor.withAlphaComponent(0.25)
+        loginButton.setTitleColor(config.buttonInnerColor, for: .normal)
         
-        facebookButton.setTitle("Soon more features", for: .normal)
+        facebookButton.setTitle("Sing up with Facebook", for: .normal)
     }
     
     func setupFonts() {
         loginButton.titleLabel?.font = Font.montserratRegular.get(size: 13)
-        signupButton.titleLabel?.font = Font.montserratRegular.get(size: 13)
+        
         facebookButton.titleLabel?.font = Font.montserratRegular.get(size: 15)
     }
     
@@ -110,6 +106,16 @@ class InitialViewController: UIViewController, BackgroundMovable {
         facebookButton.layer.shadowOffset = CGSize(width: 15, height: 15)
         facebookButton.layer.shadowRadius = 7
         facebookButton.isEnabled = false
+        
+        loginButton.layer.shadowOpacity = 0.3
+        loginButton.layer.shadowColor = UIColor(red: 89.0/255.0, green: 117.0/255.0, blue: 177.0/255.0, alpha: 1).cgColor
+        loginButton.layer.shadowOffset = CGSize(width: 15, height: 15)
+        loginButton.layer.shadowRadius = 7
+        
+        signupButton.layer.shadowOpacity = 0.3
+        signupButton.layer.shadowColor = UIColor(red: 89.0/255.0, green: 117.0/255.0, blue: 177.0/255.0, alpha: 1).cgColor
+        signupButton.layer.shadowOffset = CGSize(width: 15, height: 15)
+        signupButton.layer.shadowRadius = 7
     }
     
     // MARK: - Action's

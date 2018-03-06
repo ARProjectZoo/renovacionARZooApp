@@ -30,11 +30,11 @@
             <objects>
                 <viewController id="xgH-T0-JWM" userLabel="AR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C6B-Ah-Ov3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondoInfo" translatesAutoresizingMaskIntoConstraints="NO" id="jAY-zh-qNI" customClass="GradientImageView" customModule="renovacionARZoo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
                                         <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +45,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work In Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJg-3N-0iP">
-                                <rect key="frame" x="61.5" y="312.5" width="252" height="42"/>
+                                <rect key="frame" x="61.5" y="256" width="252" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,17 +78,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FondoProfile" translatesAutoresizingMaskIntoConstraints="NO" id="BD9-Ov-5ZU" customClass="GradientImageView" customModule="renovacionARZoo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
-                                        <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
-                                        <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="0.66152076199999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pj-Rb6" customClass="ScrollingFollowView" customModule="renovacionARZoo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                 <subviews>
@@ -96,13 +85,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
-                                                <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="0.66152076199999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fadeAlpha">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
-                                                <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
@@ -216,17 +205,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BD9-Ov-5ZU" firstAttribute="leading" secondItem="7cD-3C-sPt" secondAttribute="leading" id="4Aw-00-jof"/>
                             <constraint firstItem="eUS-iJ-gDT" firstAttribute="top" secondItem="VgV-Pj-Rb6" secondAttribute="bottom" constant="50" id="5ja-tw-wQn"/>
-                            <constraint firstAttribute="trailing" secondItem="BD9-Ov-5ZU" secondAttribute="trailing" id="OQt-yI-zc7"/>
                             <constraint firstAttribute="trailing" secondItem="CJg-Dt-EiX" secondAttribute="trailing" constant="8" id="OsQ-es-syl"/>
                             <constraint firstItem="VgV-Pj-Rb6" firstAttribute="trailing" secondItem="7cD-3C-sPt" secondAttribute="trailing" id="R3H-wZ-E9C"/>
                             <constraint firstItem="VgV-Pj-Rb6" firstAttribute="top" secondItem="7cD-3C-sPt" secondAttribute="top" id="ajx-ml-Eux"/>
                             <constraint firstItem="VgV-Pj-Rb6" firstAttribute="leading" secondItem="7cD-3C-sPt" secondAttribute="leading" id="arc-3l-9xH"/>
-                            <constraint firstAttribute="bottom" secondItem="BD9-Ov-5ZU" secondAttribute="bottom" id="c95-dv-H4n"/>
                             <constraint firstAttribute="bottom" secondItem="CJg-Dt-EiX" secondAttribute="bottom" constant="10" id="jx9-wk-WKh"/>
                             <constraint firstItem="eUS-iJ-gDT" firstAttribute="centerX" secondItem="e0J-pE-i4o" secondAttribute="centerX" id="lb8-EH-uxE"/>
-                            <constraint firstItem="BD9-Ov-5ZU" firstAttribute="top" secondItem="e0J-pE-i4o" secondAttribute="top" id="rGM-bg-DYp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7cD-3C-sPt"/>
                     </view>
@@ -238,6 +223,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="eUS-iJ-gDT" id="gFc-Ip-lwV"/>
                         <outlet property="floatingButton" destination="CJg-Dt-EiX" id="UnI-s0-WyA"/>
@@ -255,21 +242,21 @@
             <objects>
                 <viewController id="DNs-nn-qqS" customClass="StoryCreateViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qNq-32-5eo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="SdV-n7-Xdy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="Ai3-9E-ZOG">
-                                <rect key="frame" x="87.5" y="114" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="50" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="b4E-LX-sxP"/>
                                     <constraint firstAttribute="height" constant="200" id="bjd-Vy-KT2"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JC1-FO-7sE">
-                                <rect key="frame" x="62.5" y="334" width="250" height="150"/>
+                                <rect key="frame" x="62.5" y="270" width="250" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="51y-F6-wWe"/>
                                     <constraint firstAttribute="width" constant="250" id="l7H-jy-X1O"/>
@@ -280,11 +267,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fW-W9-CiM">
-                                <rect key="frame" x="164.5" y="568" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="504" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ns-wr-9CJ">
-                                <rect key="frame" x="87" y="114" width="200" height="200"/>
+                                <rect key="frame" x="87" y="50" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="LVb-cF-9Ad"/>
                                     <constraint firstAttribute="width" constant="200" id="XAr-An-6HQ"/>
@@ -328,14 +315,14 @@
             <objects>
                 <viewController id="OW7-qf-uhg" customClass="StoryCollectionViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GhI-lK-XE9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="Qp5-hP-xX8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZL2-V5-8Am">
-                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="544"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="YyZ-A1-VQl">
                                     <size key="itemSize" width="150" height="150"/>
@@ -401,12 +388,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0g-iL-rJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="-654"/>
+            <point key="canvasLocation" x="2508" y="-653"/>
         </scene>
         <!--Detail Story View Controller-->
         <scene sceneID="FJh-sD-nup">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8kV-Yc-71O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RoP-wr-vMu" customClass="DetailStoryViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R3s-Vb-toz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -447,6 +433,7 @@
                         <outlet property="collectionView" destination="iWd-ZS-gbd" id="KW0-nb-y8G"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kV-Yc-71O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3552.8000000000002" y="-653.52323838080963"/>
         </scene>
@@ -455,22 +442,11 @@
             <objects>
                 <viewController id="0fP-58-WEw" userLabel="Information" customClass="InformationViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Obt-0j-a8o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="7zS-Pm-hFY" customClass="GradientImageView" customModule="renovacionARZoo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="73" width="375" height="545"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
-                                        <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
-                                        <color key="value" red="0.94901960780000005" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="145" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ud9-ND-SY0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="continentsCell" id="aqG-2a-hsP" customClass="AnimalsRow" customModule="renovacionARZoo" customModuleProvider="target">
@@ -644,20 +620,18 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.73333333333333328" green="0.98039215686274506" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ud9-ND-SY0" firstAttribute="trailing" secondItem="7sM-yu-Gsa" secondAttribute="trailing" id="Ar2-3X-gP7"/>
-                            <constraint firstItem="7sM-yu-Gsa" firstAttribute="bottom" secondItem="7zS-Pm-hFY" secondAttribute="bottom" id="DKp-RJ-KXj"/>
                             <constraint firstItem="Ud9-ND-SY0" firstAttribute="bottom" secondItem="7sM-yu-Gsa" secondAttribute="bottom" id="N1Y-BI-YiP"/>
-                            <constraint firstItem="7sM-yu-Gsa" firstAttribute="trailing" secondItem="7zS-Pm-hFY" secondAttribute="trailing" id="StO-gE-OT9"/>
                             <constraint firstItem="Ud9-ND-SY0" firstAttribute="top" secondItem="Obt-0j-a8o" secondAttribute="top" id="ldJ-p7-aax"/>
-                            <constraint firstItem="7zS-Pm-hFY" firstAttribute="top" secondItem="7sM-yu-Gsa" secondAttribute="top" constant="9" id="n6A-KY-mXU"/>
                             <constraint firstItem="Ud9-ND-SY0" firstAttribute="leading" secondItem="7sM-yu-Gsa" secondAttribute="leading" id="qXV-JS-ys3"/>
-                            <constraint firstItem="7zS-Pm-hFY" firstAttribute="leading" secondItem="7sM-yu-Gsa" secondAttribute="leading" id="wU0-Yw-LhE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7sM-yu-Gsa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Information" id="U0X-Fm-4YY"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="tableView" destination="Ud9-ND-SY0" id="Qnn-U2-igr"/>
                     </connections>
@@ -671,11 +645,11 @@
             <objects>
                 <viewController id="seF-Q2-CE1" customClass="AnimalListViewController" customModule="renovacionARZoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mb9-Zw-zVf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-gN-aTy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOr-hL-yVF">
                                 <rect key="frame" x="47" y="369" width="280" height="183"/>
@@ -709,10 +683,17 @@
         <scene sceneID="0Bw-Yo-nVQ">
             <objects>
                 <tabBarController storyboardIdentifier="mainAPP" id="wJd-b2-3eF" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CfX-cW-IIF">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="CfX-cW-IIF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="zde-S1-gNa" kind="relationship" relationship="viewControllers" id="KnW-c4-2J5"/>
@@ -733,7 +714,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0HM-p3-Gp5">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="-44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -753,7 +734,9 @@
                         <color key="badgeColor" red="0.21960784310000001" green="0.5568627451" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oXS-IY-M95">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oXS-IY-M95">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -770,7 +753,6 @@
     <resources>
         <image name="Fondo" width="2440" height="3510"/>
         <image name="FondoInfo" width="2470" height="3473"/>
-        <image name="FondoProfile" width="2419" height="3509"/>
         <image name="fondozoo" width="5069" height="3168"/>
         <image name="fotoperfil" width="400" height="399"/>
         <image name="icon" width="24" height="24"/>
