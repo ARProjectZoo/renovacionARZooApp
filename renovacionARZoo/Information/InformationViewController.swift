@@ -12,12 +12,15 @@ import Device
 class InformationViewController: UIViewController {
  let fileManager = FileManager.default
      var categories = ["Animales", "Eventos", "Restaurantes"]
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    
+
     
         override func viewDidLoad() {
         super.viewDidLoad()
             tableView.backgroundView?.alpha = 0
+            
 //            do {
 //                let items = try fileManager.contentsOfDirectory(atPath: UserDefaults.standard.string(forKey: "arrayAnimalesPath")!)
 //                
@@ -35,7 +38,27 @@ class InformationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func checkDeviceScreenSize() -> CGFloat{
+        
+        switch Device.size() {
+        case .screen4Inch:
+            print("It's a 4 inch screen");
+            return 150
+        case .screen4_7Inch:
+            print("It's a 4.7 inch screen")
+            return 170
+        case .screen5_5Inch:
+            print("It's a 5.5 inch screen")
+            return 220
+        case .screen5_8Inch:
+            print("It's a 5.8 inch screen")
+            return 250
+            
+        default:
+            print("Unknown size")
+            return 3
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -54,32 +77,43 @@ extension InformationViewController : UITableViewDelegate { }
 
 extension InformationViewController : UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categories[section]
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return checkDeviceScreenSize()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.section == 0){
-            print("INDEXPATH ===== 0::::::::::::")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "continentsCell") as! AnimalsRow
-            return cell
-        }else if(indexPath.section == 1){
-             print("INDEXPATH ===== 1::::::::::::")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "exhibitionCell") as! exhibitionRow
-            return cell
-        }else {
-             print("INDEXPATH ===== 2::::::::::::")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "eventsCell") as! eventsRow
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell") as! tableViewRow
+        cell.imageToShow.layer.masksToBounds = false
+        cell.imageToShow.layer.cornerRadius = 10
+        cell.imageToShow.clipsToBounds = true
+        
+        
+        //shadows
+        cell.shadowView.layer.shadowOpacity = 0.5
+        cell.shadowView.layer.shadowColor = UIColor.gray.cgColor
+        cell.shadowView.layer.shadowOffset = CGSize(width: 15, height: 3)
+        cell.shadowView.layer.shadowRadius = 7
+        
+        
+        if(indexPath.row == 0){
+            cell.imageToShow.image = #imageLiteral(resourceName: "tigre-bengala-asia")
+            cell.mainTextLabel.text = "Animales"
+            cell.secondaryTextLabel.text = "Busca tu animal favorito...¡Y SIGUELÓ!"
+        }else if(indexPath.row == 1){
+            cell.imageToShow.image = #imageLiteral(resourceName: "reno-europa")
+            cell.mainTextLabel.text = "Exhibiciones"
+            cell.secondaryTextLabel.text = "Consulta las exhibiciones del zoo para hoy"
+            
+        }else if(indexPath.row == 2){
+            cell.imageToShow.image = #imageLiteral(resourceName: "gradientBG")
+            cell.mainTextLabel.text = "Restaurantes"
+            cell.secondaryTextLabel.text = "Una magnifica carta de resturantes del zoo"
+            
         }
+        return cell
     }
     
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Device
 class ProfileTableViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     var numberOfStories = 4
@@ -14,6 +15,8 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet weak var profilePictureIV: UIImageView!
     @IBOutlet weak var floatingButton: UIButton!
     
+    //constrains
+    @IBOutlet weak var heightConstraintProfileImageContainer: NSLayoutConstraint!
     
     var storiesArray : [Story] = []
     
@@ -31,12 +34,38 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
         Switcher.updateRootVC()
     }
     
+    func checkDeviceScreenSize(){
+        
+        switch Device.size() {
+        case .screen4Inch:
+            print("It's a 4 inch screen");
+           print(heightConstraintProfileImageContainer.constant)
+            heightConstraintProfileImageContainer.constant = 150
+            print(heightConstraintProfileImageContainer.constant)
+        case .screen4_7Inch:
+            print("It's a 4.7 inch screen")
+           
+            heightConstraintProfileImageContainer.constant = 150
+        case .screen5_5Inch:
+            print("It's a 5.5 inch screen")
+            heightConstraintProfileImageContainer.constant = 250
+        case .screen5_8Inch:
+            heightConstraintProfileImageContainer.constant = 250
+            print("It's a 5.8 inch screen")
+            
+            
+        default:
+            print("Unknown size")
+           
+        }
+    }
+    
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var imagePicked : UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        checkDeviceScreenSize()
         if let stories = UserDefaults.standard.array(forKey: "stories"){
             storiesArray = stories as! [Story]
         }else{

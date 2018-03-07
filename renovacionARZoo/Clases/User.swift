@@ -10,10 +10,12 @@ import Foundation
 
 class User{
     let userName : String
-    //    let email : String
+    let email : String
     //    let photo : String
-    init(userName : String){
-        self.userName = userName
+    
+    init(json : NSDictionary){
+        self.userName = json["userName"] as! String
+        self.email = json["userEmail"] as! String
     }
 }
 

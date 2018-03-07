@@ -16,4 +16,8 @@ class Story{
         self.image = image
         self.description = description
     }
+//    init(json : NSDictionary){
+//        self.image = json["userName"] as! String
+//        self.description = json["description"] as! String
+//    }
 }
