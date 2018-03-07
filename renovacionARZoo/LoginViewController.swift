@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
             myActivityIndicator.startAnimating()
             view.addSubview(myActivityIndicator)
             DispatchQueue.main.async {
-                Request(view: self, myActivityIndicator: myActivityIndicator, mainCoordinator: self.loginCoordinator).getAnimalJson()
+                
                 let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
                 let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
                 self.present(vc ,animated: true, completion: nil )

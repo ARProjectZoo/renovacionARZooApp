@@ -62,6 +62,7 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
     
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var imagePicked : UIImage!
+    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,18 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
         profilePictureIV.layer.cornerRadius = profilePictureIV.frame.size.width / 2
         profilePictureIV.clipsToBounds = true
         floatingButton.setImage(#imageLiteral(resourceName: "signo-mas-para-agregar"), for: .normal)
+        
+        
+        //Position Activity Indicator in the center of the main view
+        myActivityIndicator.center = view.center
+        
+        //If needed, yo can prevent activity Idicantor from hiing ehen stopAnimating() is called
+        myActivityIndicator.hidesWhenStopped = true
+        
+        //Start Activity Indicator
+        myActivityIndicator.startAnimating()
+        view.addSubview(myActivityIndicator)
+        myActivityIndicator.stopAnimating()
     }
     
     @IBAction func changeProfilePicture(_ sender: Any) {
@@ -136,6 +149,8 @@ class ProfileTableViewController: UIViewController, UINavigationControllerDelega
                 UIImageWriteToSavedPhotosAlbum(selectedImage, nil, nil, nil)
             }
             imagePicked = selectedImage
+            myActivityIndicator.startAnimating()
+            Request(view: self, myActivityIndicator: myActivityIndicator).chageProfilePicture(imageToUpload: selectedImage)
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
@@ -168,7 +183,7 @@ extension ProfileTableViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 1
-        let hardCodedPadding:CGFloat = 7
+        let hardCodedPadding:CGFloat = 5
         let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
         let itemHeight = itemWidth
         return CGSize(width: itemWidth, height: itemHeight)

@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 class Story{
-    let image : UIImage
-    let description : String
+    var image : UIImage
+    let comment : String
+    let urlImage : String
+    let date : String
     
-    init(image : UIImage, description : String){
-        self.image = image
-        self.description = description
+    
+    init(json : NSDictionary){
+        self.comment = json["comment"] as! String
+        self.image = UIImage()
+        self.urlImage = json["photo"] as! String
+        self.date = json["date"] as! String
     }
 //    init(json : NSDictionary){
 //        self.image = json["userName"] as! String

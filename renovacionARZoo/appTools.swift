@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 var userLogged : User!
-var arrayStories = [Story(image: #imageLiteral(resourceName: "gradientBG"), description: "PRIMERA HISTORIA DE LA APP"),Story( image: #imageLiteral(resourceName: "fotoperfil"), description: "Segunda historia de la app"),Story(image: #imageLiteral(resourceName: "tarjeta zoo2"), description: "PRIMERA HISTORIA DE LA APP"),Story(image: #imageLiteral(resourceName: "fondozoo"), description: "PRIMERA HISTORIA DE LA APP"),Story(image: #imageLiteral(resourceName: "tarjetazoo"), description: "PRIMERA HISTORIA DE LA APP")]
+var arrayStories : [Story] = []
+var arrayElements : [Elements] = []
+var arrayAnimals : [Animals] = []
 
 var dictionaryContientes = [
     1 : "Africa",
@@ -20,6 +22,7 @@ var dictionaryContientes = [
     6 : "Europa",
     7 : "Oceanía"
 ]
+
 var arrayContinentes = [
     Continents(name: "Africa", image: #imageLiteral(resourceName: "mapa_africa_continentes")),
     Continents(name: "Asia", image: #imageLiteral(resourceName: "mapa_asia_continentes")),

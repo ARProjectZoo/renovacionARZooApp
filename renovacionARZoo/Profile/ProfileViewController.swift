@@ -98,7 +98,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         collection.dataSource = self
         collection.delegate = self
         imagePicker.delegate = self
-        
         myFunc()
     }
 
@@ -120,62 +119,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         view.addSubview(myActivityIndicator)
         
         ZooRequest(view: self, myActivityIndicator: myActivityIndicator).infoUser(nameLabel : nameLabel)
+        
         let parameters : Parameters = [:]
-        //ZooRequest(view: self, myActivityIndicator: myActivityIndicator).showStories(parameters: parameters)
-        //ZooRequest(view: self, myActivityIndicator: myActivityIndicator).getImagesFromServer()
-        //Send HTTP Request to Register user
-//        let myUrl = URL(string:"http://localhost:8888/APIZOORODRIGO/API3/fuelphp/public/Users/show.json")
-//        var request = URLRequest(url:myUrl!)
-//        request.httpMethod = "GET"//compose a query string
-//        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
-//        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
-//
-//        let getString = "userName="+nameLabel.text!
-//        request.httpBody = getString.data(using: .utf8)
-//
-//        let task = URLSession.shared.dataTask(with: request)
-//        {
-//            (data: Data?, response: URLResponse?, error: Error?) in
-//
-//            removeActivityIndicator(activityIndicator: myActivityIndicator)
-//
-//            if error != nil
-//            {
-//                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
-//                print("error=\(String(describing: error))")
-//            }
-//
-//            // RESPONSE sent from a server side code to NSDictionary object:
-//            do{
-//                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-//
-//                if let parseJSON = json {
-//
-//                    let code = parseJSON["code"] as! Int
-//                    switch code {
-//                    case let (code) where code == 200:
-//                        print("Has obtenido el nombre")
-//                        print(parseJSON["token"] as! String)
-//                        UserDefaults.standard.set(parseJSON["token"] as! String, forKey: "token")
-//                        break
-//                    case let (code) where code == 400:
-//                        print("Please try again")
-//                        break
-//                    case let (code) where code == 500:
-//                        print("Error del servidor")
-//                        break
-//                    default :
-//                        print("Please try again")
-//                        break
-//                    }
-//                }
-//            }catch{
-//                removeActivityIndicator(activityIndicator: myActivityIndicator)
-//                showAlert(message: "Could not successfully perform this request. Please try again later", view : self )
-//                print(error)
-//            }
-//        }
-//        task.resume()
     }
     
     
@@ -274,19 +219,20 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
         }
     }
+    
     func selectPhoto() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 imagePicker.allowsEditing = false
                 imagePicker.sourceType = .photoLibrary
 
                 present(imagePicker, animated: true, completion: nil)
-
         }
     
     }
     
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        
         if let selectImage: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageProfile.image = selectImage
             if imagePicker.sourceType == .camera {

@@ -12,15 +12,28 @@ import Device
 class InformationViewController: UIViewController {
  let fileManager = FileManager.default
      var categories = ["Animales", "Eventos", "Restaurantes"]
+    var elemts : [Elements]!
     @IBOutlet weak var tableView: UITableView!
     
-    
+    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
     
         override func viewDidLoad() {
         super.viewDidLoad()
-            tableView.backgroundView?.alpha = 0
             
+            //Position Activity Indicator in the center of the main view
+            myActivityIndicator.center = view.center
+            
+            //If needed, yo can prevent activity Idicantor from hiing ehen stopAnimating() is called
+            myActivityIndicator.hidesWhenStopped = false
+            
+            //Start Activity Indicator
+            myActivityIndicator.startAnimating()
+            view.addSubview(myActivityIndicator)
+            tableView.backgroundView?.alpha = 0
+            Request(view: self, myActivityIndicator: myActivityIndicator).getAnimalJson()
+            Request(view: self, myActivityIndicator: myActivityIndicator).getStoriesFromUser()
+            elemts = arrayElements
 //            do {
 //                let items = try fileManager.contentsOfDirectory(atPath: UserDefaults.standard.string(forKey: "arrayAnimalesPath")!)
 //                
@@ -31,6 +44,10 @@ class InformationViewController: UIViewController {
 //                // failed to read directory – bad permissions, perhaps?
 //            }
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        elemts = arrayElements
+        print(elemts)
     }
 
     override func didReceiveMemoryWarning() {

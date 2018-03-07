@@ -89,7 +89,7 @@ class MiLoginCoordinator: LoginCoordinator {
         //Start Activity Indicator
         myActivityIndicator.startAnimating()
         mainView.view.addSubview(myActivityIndicator)
-        Request(view: mainView, myActivityIndicator: myActivityIndicator, mainCoordinator : self).logIn(parameters: parameters)
+        Request(view: mainView, myActivityIndicator: myActivityIndicator).logIn(parameters: parameters)
         
         
         
@@ -116,7 +116,7 @@ class MiLoginCoordinator: LoginCoordinator {
         //Start Activity Indicator
         myActivityIndicator.startAnimating()
         mainView.view.addSubview(myActivityIndicator)
-        Request(view: mainView, myActivityIndicator: myActivityIndicator, mainCoordinator: self).register(parameters: parameters, mainView: mainView)
+        Request(view: mainView, myActivityIndicator: myActivityIndicator).register(parameters: parameters, mainView: mainView, mainCoordinator: self)
     }
     private func forgotPasswordRequest(email: String, mainView : UIViewController){
         //Create Activity Indicator
@@ -133,7 +133,7 @@ class MiLoginCoordinator: LoginCoordinator {
         //Start Activity Indicator
         myActivityIndicator.startAnimating()
         mainView.view.addSubview(myActivityIndicator)
-        Request(view: mainView, myActivityIndicator: myActivityIndicator, mainCoordinator : self).forgotPassword(parameters: parameters)
+        Request(view: mainView, myActivityIndicator: myActivityIndicator).forgotPassword(parameters: parameters, mainCoordinator: self)
     }
     
     private func changePasswordRequest(mainView : UIViewController, newPassword : String){
@@ -150,7 +150,7 @@ class MiLoginCoordinator: LoginCoordinator {
         //Start Activity Indicator
         myActivityIndicator.startAnimating()
         mainView.view.addSubview(myActivityIndicator)
-        Request(view: mainView, myActivityIndicator: myActivityIndicator, mainCoordinator : self).changePassword(parameters: parameters)
+        Request(view: mainView, myActivityIndicator: myActivityIndicator).changePassword(parameters: parameters, mainCoordinator: self)
     }
     
     

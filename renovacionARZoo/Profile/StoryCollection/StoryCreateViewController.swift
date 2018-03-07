@@ -10,12 +10,20 @@ import UIKit
 import Device
 class StoryCreateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    
+    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     @IBOutlet weak var imageStoryCreate: UIImageView!
     @IBOutlet weak var commentStoryCreate: UITextField!
-    @IBOutlet weak var buttonStoryCreate: UIButton!
     
-    //CONSTRAINTS
+    
+    
+    //ADDBUTTON
+    
+
+    @IBAction func addStoryButton(_ sender: Any) {
+        Request(view: self, myActivityIndicator: myActivityIndicator).uploadStory(imageToUpload: imageStoryCreate.image!, comment: commentStoryCreate.text!)
+    }
+    
+     //CONSTRAINTS
     @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
     var storyToDetail : Story!
     //camera
@@ -24,7 +32,15 @@ class StoryCreateViewController: UIViewController, UINavigationControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Position Activity Indicator in the center of the main view
+        myActivityIndicator.center = view.center
         
+        //If needed, yo can prevent activity Idicantor from hiing ehen stopAnimating() is called
+        myActivityIndicator.hidesWhenStopped = false
+        
+        //Start Activity Indicator
+        myActivityIndicator.startAnimating()
+        view.addSubview(myActivityIndicator)
         checkDeviceScreenSize()
         imagePicker.delegate = self
         

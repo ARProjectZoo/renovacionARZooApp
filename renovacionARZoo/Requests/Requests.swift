@@ -14,11 +14,9 @@ let mainURL = "http://localhost:8888/CAMBIOAPI/public"
 class Request {
     let view : UIViewController
     let myActivityIndicator : UIActivityIndicatorView
-    let headers : HTTPHeaders
-    let mainCoordinator : LoginCoordinator
+    var headers : HTTPHeaders
     
-    init(view : UIViewController, myActivityIndicator : UIActivityIndicatorView, mainCoordinator: LoginCoordinator) {
-        self.mainCoordinator = mainCoordinator
+    init(view : UIViewController, myActivityIndicator : UIActivityIndicatorView) {
         let tokenSaved : String!
         if(UserDefaults.standard.string(forKey: "token") != nil){
             tokenSaved = UserDefaults.standard.string(forKey: "token")
@@ -50,7 +48,6 @@ class Request {
                     UserDefaults.standard.set(recivedData["token"] as! String, forKey: "token")
                     
                     DispatchQueue.main.async {
-                        self.getAnimalJson()
                         let storyboard: UIStoryboard =   UIStoryboard (name: "Main", bundle: nil)
                         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainAPP") as UIViewController
                         self.view.present(vc ,animated: true, completion: nil )
@@ -67,7 +64,7 @@ class Request {
         }
     }
     
-    public func register(parameters : Parameters, mainView : UIViewController){
+    public func register(parameters : Parameters, mainView : UIViewController, mainCoordinator : LoginCoordinator){
         let urlRequest = mainURL + "/Users/register.json"
         Alamofire.request(urlRequest, method : .post, parameters : parameters, headers : self.headers).responseJSON { response in
             debugPrint(response)
@@ -79,7 +76,7 @@ class Request {
                 case 201:
                     let recivedData = data.data as! NSDictionary
                     print(recivedData)
-                    self.mainCoordinator.backToLogin()
+                    mainCoordinator.backToLogin()
                     break
                 case 400:
                     print("API ::: \(data.message)")
@@ -92,7 +89,7 @@ class Request {
         }
     }
     
-    public func forgotPassword(parameters : Parameters){
+    public func forgotPassword(parameters : Parameters, mainCoordinator : LoginCoordinator){
         var requestOk : Bool = false
         let urlRequest = mainURL + "/Users/forgotPassword.json"
         Alamofire.request(urlRequest, method : .post, parameters : parameters, headers : self.headers).responseJSON { response in
@@ -106,7 +103,7 @@ class Request {
                     print(recivedData)
                     UserDefaults.standard.set(recivedData["token"] as! String, forKey: "token")
                     requestOk = true
-                    self.mainCoordinator.goToChangePassword()
+                    mainCoordinator.goToChangePassword()
                     print("REQUEST:::\(requestOk)")
                     break
                 case 400...500:
@@ -122,7 +119,7 @@ class Request {
         }
     }
     
-    public func changePassword(parameters : Parameters){
+    public func changePassword(parameters : Parameters, mainCoordinator : LoginCoordinator){
         let urlRequest = mainURL + "/Users/changePassword.json"
         Alamofire.request(urlRequest, method : .post, parameters : parameters, headers : self.headers).responseJSON { response in
             debugPrint(response)
@@ -132,7 +129,7 @@ class Request {
                 switch(data.code){
                 case 200:
                     let recivedData = data.data as! NSDictionary
-                    self.mainCoordinator.backToLogin()
+                    mainCoordinator.backToLogin()
                     print(recivedData)
                     break
                 case 400:
@@ -145,33 +142,102 @@ class Request {
         }
     }
     
-    public func chageProfilePicture(imageToUpload : UIImage, urlToAttack : String){
-        let urlRequest = mainURL + urlToAttack
+    public func chageProfilePicture(imageToUpload : UIImage){
+        let urlRequest = mainURL + "/Users/changeImage.json"
         let imgData = UIImageJPEGRepresentation(imageToUpload, 0.2)!
-        let parameters : Parameters = ["photo" : imgData]
+        print(":::::::IMAGEDATA::::::::\(imgData)")
+        let parameters : Parameters = ["photo" : "imgData"]
         
-        Alamofire.upload(
-                multipartFormData: { multipartFormData in
-                        // On the PHP side you can retrive the image using $_FILES["image"]["tmp_name"]
-                    multipartFormData.append(imgData, withName: "image")
-                        for (key, val) in parameters {
-                            multipartFormData.append((val as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(imgData, withName: "photo_path",fileName: "file.jpg", mimeType: "image/jpeg")
+//            for(key, value) in parameters{
+//                multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+//            }
+        }, to: urlRequest, headers : headers)
+        { (result) in
+            removeActivityIndicator(activityIndicator: self.myActivityIndicator)
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (Progress) in
+                    print("Upload Progress: \(Progress.fractionCompleted)")
+                })
+                
+                upload.responseJSON { response in
+                    //self.delegate?.showSuccessAlert()
+                    print(":::RESQUEST:::\(response.request)")  // original URL request
+                    print(":::::RESPONSE:::::\(response.response)") // URL response
+                    print(":::::DATA:::\(response.data)")     // server data
+                    print(":::::RESULT:::::\(response.result)")   // result of response serialization
+                    //                        self.showSuccesAlert()
+                    //self.removeImage("frame", fileExtension: "txt")
+                    if let JSON = response.result.value {
+                        var parseJson = response.result.value as! NSDictionary
+                        print(UserDefaults.standard.string(forKey: "token"))
+                        UserDefaults.standard.set(parseJson["data"] as! String, forKey: "token")
+                        UserDefaults.standard.synchronize()
+                         print(UserDefaults.standard.string(forKey: "token"))
                     }
-                },
-                to: urlRequest,
-                encodingCompletion: { encodingResult in
-                    switch encodingResult {
-                    case .success(let upload, _, _):
-                        upload.responseJSON { response in
-                            if let jsonResponse = response.result.value as? [String: Any] {
-                                print(jsonResponse)
-                            }
-                        }
-                    case .failure(let encodingError):
-                        print(encodingError)
                 }
+                
+            case .failure(let encodingError):
+                //self.delegate?.showFailAlert()
+                print(encodingError)
             }
-        )
+            
+        }
+
+    }
+    
+    public func uploadStory(imageToUpload : UIImage, comment : String){
+        var urlRequest = mainURL + "/Stories/create.json"
+        urlRequest = urlRequest.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
+        let imgData = UIImageJPEGRepresentation(imageToUpload, 0.2)!
+        print(":::::::IMAGEDATA::::::::\(imgData)")
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        
+        let parameters : Parameters = ["comment" : comment,
+                                       "date" : result]
+        
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(imgData, withName: "photo_path", fileName: "file.jpg", mimeType: "image/jpeg")
+            for(key, value) in parameters
+            {
+                multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+            }
+        }, to: urlRequest, headers : headers)
+        { (result) in
+            removeActivityIndicator(activityIndicator: self.myActivityIndicator)
+            debugPrint(result)
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (Progress) in
+                    print("Upload Progress: \(Progress.fractionCompleted)")
+                })
+                
+                upload.responseJSON { response in
+                    //self.delegate?.showSuccessAlert()
+                    print(":::RESQUEST:::\(response.request)")  // original URL request
+                    print(":::::RESPONSE:::::\(response.response)") // URL response
+                    print(":::::DATA:::\(response.data)")     // server data
+                    print(":::::RESULT:::::\(response.result)")   // result of response serialization
+                    //                        self.showSuccesAlert()
+                    //self.removeImage("frame", fileExtension: "txt")
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+                }
+                
+            case .failure(let encodingError):
+                //self.delegate?.showFailAlert()
+                print(encodingError)
+            }
+            
+        }
     }
     
     public func getAnimalJson(){
@@ -187,53 +253,18 @@ class Request {
             "Accept": "application/json"
         ]
         Alamofire.request(urlRequest, method : .get, headers : header).responseJSON{ response in
-          //  debugPrint(response)
             print("RESULT :: \(response.result)")
             if let json = response.result.value {
                 let data = Responses(json: (json as! NSDictionary) as! [String : Any])
-                let array  = data.data
-                
-                
-                print("---------------------------------------------------------")
-                print("JSON DEVUELto:::::::: \(array)")
-                print("---------------------------------------------------------")
+               
                 removeActivityIndicator(activityIndicator: self.myActivityIndicator)
                 switch(data.code){
                 case 200:
-                    var arrayAnimals : [Animals] = []
-                    let recivedData = data.data as! NSArray
-//                    for animal in recivedData {
-//                        var animalTosave = Animals()
-//                        let dataFromAnimal = animal as! NSDictionary
-//                        for (key, value) in dataFromAnimal{
-//                            if((key as! String) == "description"){
-//                                animalTosave.descriptionAnimal = value as! String
-//                            }
-//                            if((key as! String) == "id"){
-//                                animalTosave.id = value as! Int
-//                            }
-//                            if((key as! String) == "id_continent"){
-//                                animalTosave.continent = Int(value as! String)!
-//                            }
-//                            if((key as! String) == "name"){
-//                               animalTosave.name = value as! String
-//                            }
-//                            if((key as! String) == "photo"){
-//                                animalTosave.image = value as! String
-//                            }
-//                            if((key as! String) == "x"){
-//                                animalTosave.x = Float(value as! String)!
-//                            }
-//                            if((key as! String) == "y"){
-//                                animalTosave.y = Float(value as! String)!
-//
-//                            }
-//
-//                        }
-//                        arrayAnimals.append(animalTosave)
-//                    }
-                    //self.saveDataToFile(arrayAnimals: data.data as! Data)
-
+                    let array  = data.data as! NSArray
+                    for animalJSON in array{
+                        arrayAnimals.append(Animals(json: animalJSON as! NSDictionary))
+                    }
+                    self.getElementsJson()
                     break
                 case 400:
                     print("API ::: \(data.message)")
@@ -243,6 +274,91 @@ class Request {
                 }
             }
         }
+    }
+    
+    public func getElementsJson(){
+        let urlRequest = mainURL + "/Elements/download.json"
+        var token = ""
+        if(UserDefaults.standard.string(forKey: "token") != nil){
+            token = UserDefaults.standard.string(forKey: "token")!
+        }else{
+            token = ""
+        }
+        let header = [
+            "Authorization": token,
+            "Accept": "application/json"
+        ]
+        Alamofire.request(urlRequest, method : .get, headers : header).responseJSON{ response in
+            print("RESULT :: \(response.result)")
+            if let json = response.result.value {
+                let data = Responses(json: (json as! NSDictionary) as! [String : Any])
+                
+                removeActivityIndicator(activityIndicator: self.myActivityIndicator)
+                switch(data.code){
+                case 200:
+                    let array  = data.data as! NSArray
+                    for elementJson in array{
+                        arrayElements.append(Elements(json: elementJson as! NSDictionary))
+                    }
+                    for elemento in arrayElements{
+                        print(elemento.name)
+                    }
+                    break
+                case 400:
+                    print("API ::: \(data.message)")
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    }
+    
+    
+    public func getStoriesFromUser(){
+        let urlRequest = mainURL + "/Stories/show.json"
+        var token = ""
+        if(UserDefaults.standard.string(forKey: "token") != nil){
+            token = UserDefaults.standard.string(forKey: "token")!
+        }else{
+            token = ""
+        }
+        let header = [
+            "Authorization": token,
+            "Accept": "application/json"
+        ]
+        Alamofire.request(urlRequest, method : .get, headers : header).responseJSON{ response in
+            removeActivityIndicator(activityIndicator: self.myActivityIndicator)
+            debugPrint(response)
+            print("RESULT :: \(response.result)")
+            if let json = response.result.value {
+                let data = Responses(json: (json as! NSDictionary) as! [String : Any])
+                
+                removeActivityIndicator(activityIndicator: self.myActivityIndicator)
+                switch(data.code){
+                case 200:
+                    
+                    let array  = data.data as! NSArray
+                    for storiesJson in array{
+                        arrayStories.append(Story(json: storiesJson as! NSDictionary))
+                    }
+                    for stories in arrayStories{
+                        print(stories.comment)
+                    }
+                    break
+                case 400:
+                    print("API ::: \(data.message)")
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    }
+    
+    private func getUserInfo(){
+        
+
     }
     
     private func saveDataToFile(arrayAnimals : Data){

@@ -19,6 +19,17 @@ class Animals :  NSObject {
     var id : Int
     var urlImage : String
     
+    init(json : NSDictionary){
+        self.id = Int((json["id"] as! NSNumber).doubleValue)
+        self.name = json["name"] as! String
+        self.descriptionAnimal = json["description"] as! String
+        self.continent = Int((json["id_continent"] as! NSString).doubleValue)
+        self.image = UIImage()
+        self.x = Float((json["x"] as! NSString).doubleValue)
+        self.y = Float((json["y"] as! NSString).doubleValue)
+        self.urlImage = json["photo"] as! String
+        
+    }
      init(name : String, descriptionAnimal : String, continent : Int, image: UIImage){
         self.id = 0
         self.name = name
