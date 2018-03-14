@@ -11,7 +11,8 @@ import UIKit
 var userLogged : User!
 var arrayStories : [Story] = []
 var arrayElements : [Elements] = []
-var arrayAnimals : [Animals] = []
+var animal1 : Animals = Animals(name: "PER", descriptionAnimal: "some description", continent: 1, image: #imageLiteral(resourceName: "tortuga_boba-americacentralycaribe"))
+var arrayAnimals : [Animals] = [animal1]
 
 var dictionaryContientes = [
     1 : "Africa",

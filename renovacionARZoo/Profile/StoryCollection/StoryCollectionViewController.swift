@@ -26,11 +26,12 @@ class StoryCollectionViewController: UIViewController, UICollectionViewDelegate 
 extension StoryCollectionViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return arrayStories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCollectionCell", for: indexPath) as! StoryCollectionViewCell
+        cell.imageStoryCell.image = arrayStories[indexPath.row].image
         return cell
     }
     

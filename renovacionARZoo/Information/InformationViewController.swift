@@ -114,6 +114,10 @@ extension InformationViewController : UITableViewDataSource {
         cell.shadowView.layer.shadowOffset = CGSize(width: 15, height: 3)
         cell.shadowView.layer.shadowRadius = 7
         
+        //change selected bg
+        let selectedBgView = UIView()
+        selectedBgView.backgroundColor = UIColor(red: 218, green: 73, blue: 42, alpha : 0.5)
+        cell.selectedBackgroundView = selectedBgView
         
         if(indexPath.row == 0){
             cell.imageToShow.image = #imageLiteral(resourceName: "tigre-bengala-asia")

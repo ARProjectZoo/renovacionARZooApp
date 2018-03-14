@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.6.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - ARCL (1.0.2)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -13,6 +14,13 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.30.0):
     - FBSDKCoreKit
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.6.0):
+    - GoogleMaps/Base (= 2.6.0)
   - SkyFloatingLabelTextField (3.4.0)
   - Toaster (2.1.1)
   - Validator (3.0)
@@ -20,8 +28,11 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireImage (~> 3.3)
+  - ARCL
   - Device (~> 3.0.3)
   - FBSDKLoginKit
+  - GoogleMaps
+  - GooglePlaces
   - SkyFloatingLabelTextField (~> 3.0)
   - Toaster
   - Validator
@@ -29,14 +40,17 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  ARCL: 88300cadfbdd6a9288ca17ad18d3ac972d6cb1e6
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Device: 9a5264ee4e0f392e7153d2c46b10c8df46b7aad2
   FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
   FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
   Validator: 7d9828daffabc757604603052e407f208fa9b6d5
 
-PODFILE CHECKSUM: 471e29fbfb1aaceb7f7329af734adfbb597e7312
+PODFILE CHECKSUM: 2193ba7afd7cb5b76c0e7c296edf42f1657ab205
 
 COCOAPODS: 1.4.0
